@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour
 {
     [SerializeField] int maxLife;
-    [SerializeField] int courrentLife;
+    [SerializeField] int currentLife;
     
     void Start()
     {
@@ -19,11 +19,11 @@ public class EnemyLife : MonoBehaviour
 
     void ChangeLife(int life)
     {
-        courrentLife += life;
+        currentLife += life;
 
-        if (courrentLife > maxLife)
+        if (currentLife > maxLife)
         {
-            courrentLife = maxLife;
+            currentLife = maxLife;
         }
 
         if(life<=0)
@@ -37,6 +37,7 @@ public class EnemyLife : MonoBehaviour
     {
         if(other.gameObject.CompareTag("PlayerBullet"))
         {
+            Debug.Log("La bala toca al enemigo");
             ChangeLife(-1);
         }
     }

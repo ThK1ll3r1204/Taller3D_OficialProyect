@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   rb: {fileID: 0}
-  velocidad: 5
+  velocidad: 10
   shootingPoint: {fileID: 1366743264459405148}
   LightBulletPrefab: {fileID: 5257577806617775449, guid: fd3d39ac3b7ceae4faa3dd6f971158ca,
     type: 3}
@@ -187,7 +187,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &6531130558034406016
 GameObject:

@@ -29,11 +29,22 @@ public class PlayerA : MonoBehaviour
 
     void Movement()
     {
+        Transform camTransform = Camera.main.transform;
+
+        Vector3 forward = camTransform.forward;
+        Vector3 right = camTransform.right;
+
+        forward.y = 0;
+        right.y = 0;
+        forward.Normalize();
+        right.Normalize();
+
         float movimientoHorizontal = Input.GetAxis("Horizontal");
         float movimientoVertical = Input.GetAxis("Vertical");
 
-        Vector3 movimiento = new Vector3(movimientoHorizontal, 0.0f, movimientoVertical);
-        rb.AddForce(movimiento * velocidad);
+        Vector3 movimiento = forward * movimientoVertical + right * movimientoHorizontal;
+        movimiento.Normalize();
+        rb.velocity = movimiento * velocidad;
 
     }
 
