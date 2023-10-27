@@ -19,7 +19,10 @@ public class CameraControl : MonoBehaviour
 
     void CameraMovement()
     {
-        
-        transform.position = Vector3.Lerp(transform.position, viewTarget.position + TargetOffset, cameraSpeed * Time.deltaTime);
+        if (viewTarget != null)
+        {
+            transform.position = Vector3.Lerp(transform.position, viewTarget.position + TargetOffset, cameraSpeed * Time.deltaTime);
+
+        }
     }
 }

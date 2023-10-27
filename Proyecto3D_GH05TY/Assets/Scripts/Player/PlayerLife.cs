@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] int maxLife;
-    [SerializeField] int courrentLife;
+    [SerializeField] int currentLife;
     
 
     // Start is called before the first frame update
@@ -22,16 +22,16 @@ public class PlayerLife : MonoBehaviour
 
     void ChangeLife(int life)
     {
-        courrentLife += life;
+        currentLife += life;
 
-        if (courrentLife > maxLife)
+        if (currentLife > maxLife)
         {
-            courrentLife = maxLife;
+            currentLife = maxLife;
         }
 
         if (life <= 0)
         {
-            Destroy(gameObject, 2f);
+            Destroy(this.gameObject);
         }
 
     }

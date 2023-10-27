@@ -28,7 +28,7 @@ public class EnemyLife : MonoBehaviour
 
         if(life<=0)
         {
-            Destroy(gameObject, 2f);
+            Destroy(this.gameObject);
         }
 
     }
@@ -37,7 +37,6 @@ public class EnemyLife : MonoBehaviour
     {
         if(other.gameObject.CompareTag("PlayerBullet"))
         {
-            Debug.Log("La bala toca al enemigo");
             ChangeLife(-1);
         }
     }

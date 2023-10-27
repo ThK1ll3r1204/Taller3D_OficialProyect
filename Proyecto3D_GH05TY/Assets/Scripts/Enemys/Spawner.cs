@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject objectToSpawn; // Drag the prefab of the object to spawn here.
-    public float spawnInterval = 2.0f; // Time between spawns.
+    [SerializeField] GameObject enemy1;
+    [SerializeField] GameObject enemy2;
+
+    public float spawnInterval = 2.0f; 
     private float timer = 0.0f;
 
     void Update()
@@ -16,7 +18,7 @@ public class Spawner : MonoBehaviour
         {
             timer = 0.0f;
 
-            Instantiate(objectToSpawn, transform.position, Quaternion.identity);
+            Instantiate(enemy1, transform.position, Quaternion.identity);
         }
     }
 }

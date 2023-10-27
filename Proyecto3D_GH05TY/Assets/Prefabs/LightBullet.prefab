@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 25
   bulletMaxRange: 15
+  collisionTag: Enemy
 --- !u!135 &680812058141855900
 SphereCollider:
   m_ObjectHideFlags: 0
