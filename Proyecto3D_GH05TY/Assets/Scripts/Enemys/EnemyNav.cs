@@ -17,9 +17,14 @@ public class EnemyNav : MonoBehaviour
 
     void Update()
     {
-        _player =GameObject.Find("Player").GetComponent<Transform>();
-        agent.destination = _player.position;
+        FollowPlayer();
         
+    }
+
+    void FollowPlayer()
+    {
+        _player = GameObject.Find("Player").GetComponent<Transform>();
+        agent.destination = _player.position;
     }
 
     

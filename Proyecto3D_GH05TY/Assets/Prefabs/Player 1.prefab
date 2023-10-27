@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7783093785567571864}
   - component: {fileID: 9057236648869272734}
   - component: {fileID: 5547094333185763394}
+  - component: {fileID: 6110136178973871435}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -156,12 +157,9 @@ MonoBehaviour:
   movementSpeed: 10
   rb: {fileID: 0}
   velocidad: 10
-  shootingPoint: {fileID: 1366743264459405148}
-  LightBulletPrefab: {fileID: 5257577806617775449, guid: fd3d39ac3b7ceae4faa3dd6f971158ca,
-    type: 3}
-  DarkBulletPrefab: {fileID: 5257577806617775449, guid: ee4c51620f5e0194a9a64df1c72f00ce,
-    type: 3}
-  shootingRate: 0.4
+  dashDistance: 15
+  dashDuration: 0.5
+  dashCooldown: 2
 --- !u!54 &5547094333185763394
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -189,6 +187,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &6110136178973871435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056046931398486184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9eddc30b1708744dbfae266b181f497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingPoint: {fileID: 1366743264459405148}
+  LightBulletPrefab: {fileID: 5257577806617775449, guid: fd3d39ac3b7ceae4faa3dd6f971158ca,
+    type: 3}
+  DarkBulletPrefab: {fileID: 5257577806617775449, guid: ee4c51620f5e0194a9a64df1c72f00ce,
+    type: 3}
+  shootingRate: 0.3
 --- !u!1 &6531130558034406016
 GameObject:
   m_ObjectHideFlags: 0

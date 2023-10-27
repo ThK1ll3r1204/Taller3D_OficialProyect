@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2788959742849141293}
   - component: {fileID: 8084259583432052952}
   - component: {fileID: 4878221470361707757}
-  - component: {fileID: 3216883100964989566}
   - component: {fileID: 2340515257113380439}
+  - component: {fileID: 680812058141855900}
   m_Layer: 0
   m_Name: LightBullet
   m_TagString: PlayerBullet
@@ -85,7 +85,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3216883100964989566
+--- !u!114 &2340515257113380439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257577806617775449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9bc946eb8b6b54e8d5f2fd5b99a6bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 25
+  bulletMaxRange: 15
+--- !u!135 &680812058141855900
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,19 +118,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.23500547
-  m_Center: {x: 0.09203814, y: -0.03505312, z: 0.14921147}
---- !u!114 &2340515257113380439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5257577806617775449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f9bc946eb8b6b54e8d5f2fd5b99a6bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 25
-  bulletMaxRange: 15
+  m_Radius: 0.34
+  m_Center: {x: 0, y: 0, z: 0}

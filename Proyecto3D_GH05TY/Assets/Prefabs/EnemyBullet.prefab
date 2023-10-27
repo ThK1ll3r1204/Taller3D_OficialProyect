@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 8084259583432052952}
   - component: {fileID: 4878221470361707757}
   - component: {fileID: 2340515257113380439}
-  - component: {fileID: 8084194792219515004}
+  - component: {fileID: 680812058141855900}
+  - component: {fileID: 6921738227089017310}
   m_Layer: 0
-  m_Name: BlackBullet
-  m_TagString: PlayerBullet
+  m_Name: EnemyBullet
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.142, y: 1.66, z: -1.59}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.5}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 339e3a3c6e02fef4c899a50048a74e8d, type: 2}
+  - {fileID: 2100000, guid: 0287702b8c595094fabc20a0a315caf6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9bc946eb8b6b54e8d5f2fd5b99a6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 25
-  bulletMaxRange: 15
---- !u!135 &8084194792219515004
+  bulletSpeed: 1
+  bulletMaxRange: 30
+--- !u!135 &680812058141855900
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,5 +119,32 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.34
+  m_Radius: 0.5218361
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6921738227089017310
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257577806617775449}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0

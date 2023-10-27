@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerA : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
     [SerializeField] Rigidbody rb;
     [SerializeField] float velocidad;
-    [SerializeField] Transform shootingPoint;
-    [SerializeField] GameObject LightBulletPrefab;
-    [SerializeField] GameObject DarkBulletPrefab;
 
-    [SerializeField] float shootingRate;
-    private float canShoot = 0;
-
+    private Vector3 lastMoveDirection = Vector3.forward;
+    [SerializeField]
+    float dashDistance = 5.0f; 
+    [SerializeField]
+    float dashDuration = 0.5f; 
+    [SerializeField]
+    float dashCooldown = 2.0f; 
+    private bool canDash = true; 
 
     void Start()
     {
@@ -24,7 +26,11 @@ public class PlayerA : MonoBehaviour
     {
         Movement();
         PlayerCanRotate();
-        PlayerShoot();
+
+        if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(PerformDash(lastMoveDirection));
+        }
     }
 
     void Movement()
@@ -44,6 +50,12 @@ public class PlayerA : MonoBehaviour
 
         Vector3 movimiento = forward * movimientoVertical + right * movimientoHorizontal;
         movimiento.Normalize();
+
+        if (movimiento != Vector3.zero)
+        {
+            lastMoveDirection = movimiento;
+        }
+
         rb.velocity = movimiento * velocidad;
 
     }
@@ -59,19 +71,27 @@ public class PlayerA : MonoBehaviour
         }
     }
 
-    void PlayerShoot()
+    IEnumerator PerformDash(Vector3 dashDirection)
     {
-        canShoot += Time.deltaTime;
-        
-        if (Input.GetMouseButton(0) && canShoot > shootingRate)
+        canDash = false;
+
+        Vector3 startPosition = transform.position;
+        Vector3 endPosition = transform.position + dashDirection.normalized * dashDistance;
+
+        float startTime = Time.time;
+
+        while (Time.time < startTime + dashDuration)
         {
-            Instantiate(LightBulletPrefab, shootingPoint.position, shootingPoint.rotation);
-            canShoot = 0;
+            transform.position = Vector3.Lerp(startPosition, endPosition, (Time.time - startTime) / dashDuration);
+            yield return null;
         }
-        else if (Input.GetMouseButton(1) && canShoot > shootingRate)
-        {
-            Instantiate(DarkBulletPrefab, shootingPoint.position, shootingPoint.rotation);
-            canShoot = 0;
-        }
+
+        transform.position = endPosition;
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+
+        rb.velocity = Vector3.zero;
     }
+
 }
