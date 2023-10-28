@@ -46,6 +46,9 @@ GameObject:
   - component: {fileID: 9057236648869272734}
   - component: {fileID: 5547094333185763394}
   - component: {fileID: 6110136178973871435}
+  - component: {fileID: 2250941149625012613}
+  - component: {fileID: -2076769259236622079}
+  - component: {fileID: 2079795706756702488}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -205,6 +208,53 @@ MonoBehaviour:
   DarkBulletPrefab: {fileID: 5257577806617775449, guid: ee4c51620f5e0194a9a64df1c72f00ce,
     type: 3}
   shootingRate: 0.3
+--- !u!114 &2250941149625012613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056046931398486184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f05b33c1cc64644f96262625305902d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 20
+  currentLife: 20
+--- !u!114 &-2076769259236622079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056046931398486184}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e72ced083ed50246873a048a0161348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingPoint: {fileID: 1366743264459405148}
+  LightBulletPrefab: {fileID: 5257577806617775449, guid: fd3d39ac3b7ceae4faa3dd6f971158ca,
+    type: 3}
+  DarkBulletPrefab: {fileID: 5257577806617775449, guid: ee4c51620f5e0194a9a64df1c72f00ce,
+    type: 3}
+  shootingRate: 0.3
+--- !u!114 &2079795706756702488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056046931398486184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30c5f5e80dbe44479c95be7a5d40347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activePowerUp: 4
+  shieldPrefab: {fileID: 7202060700357391938, guid: e744ce033ab04214f950e826ebefdeb1,
+    type: 3}
 --- !u!1 &6531130558034406016
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +266,6 @@ GameObject:
   - component: {fileID: 7940226165065604244}
   - component: {fileID: 574814288096714265}
   - component: {fileID: 5317183644902588427}
-  - component: {fileID: 2411402980691424797}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -290,24 +339,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2411402980691424797
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6531130558034406016}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

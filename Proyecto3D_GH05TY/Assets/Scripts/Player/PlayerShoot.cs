@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    [SerializeField] Transform shootingPoint;
-    [SerializeField] GameObject LightBulletPrefab;
-    [SerializeField] GameObject DarkBulletPrefab;
-    [SerializeField] float shootingRate;
-    private float canShoot = 0;
+    [SerializeField] protected Transform shootingPoint;
+    [SerializeField] protected GameObject LightBulletPrefab;
+    [SerializeField] protected GameObject DarkBulletPrefab;
+    public float shootingRate;
+    protected float canShoot = 0;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
         PlayerShooting();
     }
 
-    void PlayerShooting()
+    protected virtual void PlayerShooting()
     {
         canShoot += Time.deltaTime;
 

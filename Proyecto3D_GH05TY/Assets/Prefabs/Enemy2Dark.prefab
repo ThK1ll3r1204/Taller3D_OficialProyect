@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6497243894473432145}
   - component: {fileID: 7512996497197515928}
   m_Layer: 0
-  m_Name: Enemy2
+  m_Name: Enemy2Dark
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f155a8a9508f39749b6abc1da0ec7835, type: 2}
+  - {fileID: 2100000, guid: 604ca51da342c314caf8406c579b1f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 10
   currentLife: 10
+  activeEnemyType: 1
 --- !u!195 &6497243894473432145
 NavMeshAgent:
   m_ObjectHideFlags: 0

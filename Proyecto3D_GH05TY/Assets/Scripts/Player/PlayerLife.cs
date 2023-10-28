@@ -5,22 +5,19 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] int maxLife;
-    [SerializeField] int currentLife;
+    public int currentLife;
     
-
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
-    void ChangeLife(int life)
+    protected virtual void ChangeLife(int life)
     {
         currentLife += life;
 
@@ -36,11 +33,21 @@ public class PlayerLife : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            ChangeLife(-1);
+        }
+    }
+
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("EnemyBullet"))
         {
-            ChangeLife(-1);
+            BulletBehaviourA enemyBullet = other.gameObject.GetComponent<BulletBehaviourA>();
+            int damageRecieved = enemyBullet.Damage;
+            ChangeLife(-damageRecieved);
         }
     }
 

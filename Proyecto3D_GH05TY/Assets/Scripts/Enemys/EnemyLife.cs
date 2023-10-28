@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyType
+{
+    Light,
+    Dark
+}
 public class EnemyLife : MonoBehaviour
 {
     [SerializeField] int maxLife;
     [SerializeField] int currentLife;
-    
+    [SerializeField] EnemyType activeEnemyType;
+
     void Start()
     {
 
@@ -35,10 +41,31 @@ public class EnemyLife : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("PlayerBullet"))
+        if(other.gameObject.name == ("LightBullet") && activeEnemyType == EnemyType.Light)
         {
-            ChangeLife(-1);
+            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
+            int damageRecieved = playerBullet.Damage;
+            ChangeLife(-damageRecieved * 2);
         }
+        else if (other.gameObject.name == ("LightBullet") && activeEnemyType != EnemyType.Light)
+        {
+            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
+            int damageRecieved = playerBullet.Damage;
+            ChangeLife(-damageRecieved);
+        }
+        else if (other.gameObject.name == ("BlackBullet") && activeEnemyType == EnemyType.Dark)
+        {
+            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
+            int damageRecieved = playerBullet.Damage;
+            ChangeLife(-damageRecieved * 2);
+        }
+        else if (other.gameObject.name == ("BlackBullet") && activeEnemyType != EnemyType.Dark)
+        {
+            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
+            int damageRecieved = playerBullet.Damage;
+            ChangeLife(-damageRecieved);
+        }
+
     }
 
 }

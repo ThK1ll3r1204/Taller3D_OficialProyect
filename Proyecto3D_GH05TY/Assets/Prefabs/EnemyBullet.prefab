@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9bc946eb8b6b54e8d5f2fd5b99a6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 3
   bulletMaxRange: 30
   collisionTag: Player
-  bulletDamage: 0
+  Damage: 2
 --- !u!135 &680812058141855900
 SphereCollider:
   m_ObjectHideFlags: 0

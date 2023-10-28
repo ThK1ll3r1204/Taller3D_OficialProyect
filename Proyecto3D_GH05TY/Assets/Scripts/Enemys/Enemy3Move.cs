@@ -1,49 +1,62 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyRandomMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
+    public Transform player;
     [SerializeField]
-    public float moveSpeed;
+    private float moveSpeed;
     [SerializeField]
-    public float changeDirectionInterval;
+    private float changeDirectionRate;
     [SerializeField]
-    private float timeSinceLastDirectionChange;
-    private Vector3 moveDirection;
+    private float maxDistance;
+    private Vector3 randomDirection;
+    [SerializeField]
+    private float changeDirectionTimer;
 
-    void Start()
+    private void Start()
     {
-        ChangeMoveDirection();
+        player = GameObject.Find("Player").GetComponent<Transform>();
+        ChangeDirection();
     }
 
-    void Update()
+    private void Update()
     {
         Movement();
     }
 
-    void Movement()
+    private void Movement()
     {
-        // Mueve al enemigo en la dirección actual.
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-
-        // Actualiza el temporizador para el cambio de dirección.
-        timeSinceLastDirectionChange += Time.deltaTime;
-
-        // Verifica si es hora de cambiar de dirección.
-        if (timeSinceLastDirectionChange >= changeDirectionInterval)
+        if (player != null)
         {
-            ChangeMoveDirection();
-        }
-    }
-    
-    void ChangeMoveDirection()
-    {
-        // Genera una nueva dirección de movimiento aleatoria en los ejes X y Z.
-        moveDirection = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f)).normalized;
+            changeDirectionTimer += Time.deltaTime;
+            if (changeDirectionTimer >= changeDirectionRate)
+            {
+                ChangeDirection();
+            }
 
-        // Reinicia el temporizador.
-        timeSinceLastDirectionChange = 0.0f;
+            Vector3 directionToPlayer = player.position - transform.position;
+            directionToPlayer.y = 0;
+            float distanceToPlayer = directionToPlayer.magnitude;
+
+            if (distanceToPlayer < maxDistance)
+            {
+                transform.Translate(-directionToPlayer.normalized * moveSpeed * Time.deltaTime);
+            }
+            else
+            {
+                transform.Translate(randomDirection.normalized * moveSpeed * Time.deltaTime);
+            }
+        }
+        
+    }
+
+    private void ChangeDirection()
+    {
+        randomDirection = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
+        randomDirection.Normalize();
+
+        changeDirectionTimer = 0;
     }
 }
 

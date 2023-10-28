@@ -9,7 +9,7 @@ public class BulletBehaviourA : MonoBehaviour
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletMaxRange;
     [SerializeField] private string collisionTag;
-    public int bulletDamage;
+    public int Damage;
     
     void Start()
     {

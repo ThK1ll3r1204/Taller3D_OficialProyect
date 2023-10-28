@@ -4,21 +4,43 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject enemy1;
-    [SerializeField] GameObject enemy2;
-
-    public float spawnInterval = 2.0f; 
-    private float timer = 0.0f;
-
-    void Update()
+    [SerializeField]
+    GameObject[] gameObjectsPrefabs;
+    [SerializeField]
+    private float spawnRate;
+    [SerializeField]
+    string spawnObjectsTag;
+    [SerializeField]
+    int maxObjectsOnScreen;
+    private int totalSpawnedObjects;
+    public int maxSpawnedObjects;
+    private void Start()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= spawnInterval)
-        {
-            timer = 0.0f;
-
-            Instantiate(enemy1, transform.position, Quaternion.identity);
-        }
+        StartCoroutine(SpawnObjects());
     }
+
+    private IEnumerator SpawnObjects()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnRate);
+
+            int currentEntities = CountObjectsWithTag(spawnObjectsTag);
+
+            if (currentEntities < maxObjectsOnScreen || totalSpawnedObjects < maxSpawnedObjects)
+            {
+                int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
+                GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
+                Instantiate(randomPrefab, transform.position, Quaternion.identity);
+                totalSpawnedObjects++;
+            }
+        }
+
+    }
+    int CountObjectsWithTag(string tag)
+    {
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
+        return objectsWithTag.Length;
+    }
+
 }
