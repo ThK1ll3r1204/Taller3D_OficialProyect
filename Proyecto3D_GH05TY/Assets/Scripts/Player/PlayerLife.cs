@@ -26,7 +26,7 @@ public class PlayerLife : MonoBehaviour
             currentLife = maxLife;
         }
 
-        if (life <= 0)
+        if (currentLife <= 0)
         {
             Destroy(this.gameObject);
         }

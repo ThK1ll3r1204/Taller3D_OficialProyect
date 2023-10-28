@@ -32,7 +32,7 @@ public class EnemyLife : MonoBehaviour
             currentLife = maxLife;
         }
 
-        if(life<=0)
+        if(currentLife<=0)
         {
             Destroy(this.gameObject);
         }
@@ -41,30 +41,13 @@ public class EnemyLife : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == ("LightBullet") && activeEnemyType == EnemyType.Light)
-        {
-            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
-            int damageRecieved = playerBullet.Damage;
-            ChangeLife(-damageRecieved * 2);
-        }
-        else if (other.gameObject.name == ("LightBullet") && activeEnemyType != EnemyType.Light)
+        if(other.gameObject.CompareTag("PlayerBullet"))
         {
             BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
             int damageRecieved = playerBullet.Damage;
             ChangeLife(-damageRecieved);
         }
-        else if (other.gameObject.name == ("BlackBullet") && activeEnemyType == EnemyType.Dark)
-        {
-            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
-            int damageRecieved = playerBullet.Damage;
-            ChangeLife(-damageRecieved * 2);
-        }
-        else if (other.gameObject.name == ("BlackBullet") && activeEnemyType != EnemyType.Dark)
-        {
-            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
-            int damageRecieved = playerBullet.Damage;
-            ChangeLife(-damageRecieved);
-        }
+        
 
     }
 

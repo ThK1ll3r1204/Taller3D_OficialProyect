@@ -48,7 +48,7 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: c44295b3b88d1be4e8d42f2d32356d97, type: 3}
   - {fileID: 268938346636702691, guid: 6924b4fbabe794f44b91313f45280175, type: 3}
   spawnRate: 5
-  spawnObjectsTag: 
+  spawnObjectsTag: Enemy
   maxObjectsOnScreen: 0
   maxSpawnedObjects: 0
 --- !u!1 &2825829928431515059
@@ -99,7 +99,7 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: c44295b3b88d1be4e8d42f2d32356d97, type: 3}
   - {fileID: 268938346636702691, guid: 6924b4fbabe794f44b91313f45280175, type: 3}
   spawnRate: 5
-  spawnObjectsTag: 
+  spawnObjectsTag: Enemy
   maxObjectsOnScreen: 0
   maxSpawnedObjects: 0
 --- !u!1 &2869290604067840088
