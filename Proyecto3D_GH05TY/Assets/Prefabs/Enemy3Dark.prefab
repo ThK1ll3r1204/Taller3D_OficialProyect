@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2716966280613434065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 0.223, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0.223, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,12 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectsPrefabs:
-  - {fileID: 268938346636702691, guid: c44295b3b88d1be4e8d42f2d32356d97, type: 3}
-  - {fileID: 268938346636702691, guid: 6924b4fbabe794f44b91313f45280175, type: 3}
+  - {fileID: 268938346636702691, guid: e20892007657dd34baa6e519e7e3f912, type: 3}
+  - {fileID: 268938346636702691, guid: 3c8ca94051bc9174695f0a5b80a584ba, type: 3}
   spawnRate: 5
-  spawnObjectsTag: Enemy
-  maxObjectsOnScreen: 0
-  maxSpawnedObjects: 0
+  maxObjectsOnScreen: 20
+  maxSpawnedObjects: 8
 --- !u!1 &2825829928431515059
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 2825829928431515059}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0.22299998, z: 0}
+  m_LocalPosition: {x: -1.5, y: 0.223, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -96,12 +95,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectsPrefabs:
-  - {fileID: 268938346636702691, guid: c44295b3b88d1be4e8d42f2d32356d97, type: 3}
-  - {fileID: 268938346636702691, guid: 6924b4fbabe794f44b91313f45280175, type: 3}
+  - {fileID: 268938346636702691, guid: e20892007657dd34baa6e519e7e3f912, type: 3}
+  - {fileID: 268938346636702691, guid: 3c8ca94051bc9174695f0a5b80a584ba, type: 3}
   spawnRate: 5
-  spawnObjectsTag: Enemy
-  maxObjectsOnScreen: 0
-  maxSpawnedObjects: 0
+  maxObjectsOnScreen: 20
+  maxSpawnedObjects: 8
 --- !u!1 &2869290604067840088
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +115,7 @@ GameObject:
   - component: {fileID: 4028401575141320414}
   - component: {fileID: 1184222247751364319}
   - component: {fileID: 7162550016694393636}
+  - component: {fileID: 3713259613291361766}
   m_Layer: 0
   m_Name: Enemy3Dark
   m_TagString: Enemy
@@ -134,8 +133,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.01, y: 0.98, z: 8.28}
-  m_LocalScale: {x: 1, y: 2.7189, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.66, y: 1.32, z: 0.66}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1132000046982092916}
   - {fileID: 1353036907581332908}
@@ -234,7 +233,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -271,3 +270,26 @@ MonoBehaviour:
   maxLife: 8
   currentLife: 8
   activeEnemyType: 1
+  pointsGiven: 3
+--- !u!195 &3713259613291361766
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2869290604067840088}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
     [SerializeField] Rigidbody rb;
+    [SerializeField] PlayerLife playerLifeScript;
     [SerializeField] float velocidad;
 
     private Vector3 lastMoveDirection = Vector3.forward;
@@ -20,6 +21,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rb= GetComponent<Rigidbody>();
+        playerLifeScript = GetComponent<PlayerLife>();
     }
 
     void Update()
@@ -45,8 +47,8 @@ public class PlayerMove : MonoBehaviour
         forward.Normalize();
         right.Normalize();
 
-        float movimientoHorizontal = Input.GetAxis("Horizontal");
-        float movimientoVertical = Input.GetAxis("Vertical");
+        float movimientoHorizontal = Input.GetAxisRaw("Horizontal");
+        float movimientoVertical = Input.GetAxisRaw("Vertical");
 
         Vector3 movimiento = forward * movimientoVertical + right * movimientoHorizontal;
         movimiento.Normalize();
@@ -82,10 +84,16 @@ public class PlayerMove : MonoBehaviour
 
         while (Time.time < startTime + dashDuration)
         {
+            rb.useGravity = false;
+            playerLifeScript.invulnerableState = true;
+
             transform.position = Vector3.Lerp(startPosition, endPosition, (Time.time - startTime) / dashDuration);
+
+            
             yield return null;
         }
-
+        rb.useGravity = true;
+        playerLifeScript.invulnerableState = false;
         transform.position = endPosition;
 
         yield return new WaitForSeconds(dashCooldown);

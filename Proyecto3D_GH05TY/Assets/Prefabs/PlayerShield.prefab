@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2766069701796162004}
   m_Layer: 0
   m_Name: PlayerShield
-  m_TagString: Untagged
+  m_TagString: PlayerShield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,5 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b1384d8a59d2e4abf6564b35f8e25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 10
-  currentLife: 10
+  shieldTimer: 0
+  shieldTurnOff: 100
+  knockbackForce: 1

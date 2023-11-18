@@ -12,10 +12,14 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] int maxLife;
     [SerializeField] int currentLife;
     [SerializeField] EnemyType activeEnemyType;
+    [SerializeField] int pointsGiven;
+    ScoreCounter scoreScript;
+    GameManager gameManager;
 
     void Start()
     {
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        scoreScript = GameObject.Find("ScoreManager").GetComponent<ScoreCounter>();
     }
 
     void Update()
@@ -34,6 +38,9 @@ public class EnemyLife : MonoBehaviour
 
         if(currentLife<=0)
         {
+            gameManager.currentEnemies--;
+            scoreScript.scoreMultiplierTimer++;
+            scoreScript.AddScore(pointsGiven);
             Destroy(this.gameObject);
         }
 
@@ -41,14 +48,30 @@ public class EnemyLife : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("PlayerBullet"))
+        if(other.gameObject.CompareTag("PlayerLightBullet") && activeEnemyType == EnemyType.Light)
+        {
+            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
+            int damageRecieved = playerBullet.Damage;
+            ChangeLife(-damageRecieved * 100);
+        }
+        else if (other.gameObject.CompareTag("PlayerLightBullet") && activeEnemyType != EnemyType.Light)
         {
             BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
             int damageRecieved = playerBullet.Damage;
             ChangeLife(-damageRecieved);
         }
-        
-
+        else if (other.gameObject.CompareTag("PlayerDarkBullet") && activeEnemyType == EnemyType.Dark)
+        {
+            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
+            int damageRecieved = playerBullet.Damage;
+            ChangeLife(-damageRecieved * 100);
+        }
+        else if (other.gameObject.CompareTag("PlayerDarkBullet") && activeEnemyType != EnemyType.Dark)
+        {
+            BulletBehaviourA playerBullet = other.gameObject.GetComponent<BulletBehaviourA>();
+            int damageRecieved = playerBullet.Damage;
+            ChangeLife(-damageRecieved);
+        }
     }
 
 }

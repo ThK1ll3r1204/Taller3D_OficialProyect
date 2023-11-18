@@ -1,11 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy3Move : MonoBehaviour
 {
     public Transform player;
-    [SerializeField]
-    private float moveSpeed;
+    public float moveSpeed;
     [SerializeField]
     private float changeDirectionRate;
     [SerializeField]
@@ -13,22 +12,27 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 randomDirection;
     [SerializeField]
     private float changeDirectionTimer;
+    private Rigidbody rb;
 
     private void Start()
     {
         player = GameObject.Find("Player").GetComponent<Transform>();
+        rb = GetComponent<Rigidbody>();
         ChangeDirection();
     }
 
     private void Update()
     {
         Movement();
+        
     }
 
     private void Movement()
     {
         if (player != null)
         {
+            transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
+
             changeDirectionTimer += Time.deltaTime;
             if (changeDirectionTimer >= changeDirectionRate)
             {
@@ -41,11 +45,12 @@ public class EnemyMovement : MonoBehaviour
 
             if (distanceToPlayer < maxDistance)
             {
-                transform.Translate(-directionToPlayer.normalized * moveSpeed * Time.deltaTime);
+                rb.velocity = (-directionToPlayer + randomDirection).normalized * moveSpeed;
+
             }
             else
             {
-                transform.Translate(randomDirection.normalized * moveSpeed * Time.deltaTime);
+                rb.velocity = randomDirection.normalized * moveSpeed;
             }
         }
         
@@ -57,6 +62,22 @@ public class EnemyMovement : MonoBehaviour
         randomDirection.Normalize();
 
         changeDirectionTimer = 0;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerShield"))
+        {
+            moveSpeed = 0f;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerShield"))
+        {
+            moveSpeed = 3.5f;
+        }
     }
 }
 

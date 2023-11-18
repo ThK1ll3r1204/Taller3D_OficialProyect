@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] int maxLife;
+    public int maxLife;
     public int currentLife;
-    
+    public bool invulnerableState;
+    public Transform spawn;
+
     void Start()
     {
-
+        invulnerableState = false;
+        spawn = GameObject.Find("Spawn").GetComponent<Transform>();
     }
 
     void Update()
     {
-        
+        if (currentLife <= 0)
+        {
+            SceneManager.LoadScene("Menu");
+            Destroy(gameObject);
+
+        }
+
+        ChangeMaxLife();
     }
 
     protected virtual void ChangeLife(int life)
@@ -25,17 +37,21 @@ public class PlayerLife : MonoBehaviour
         {
             currentLife = maxLife;
         }
+               
 
-        if (currentLife <= 0)
+    }
+
+    void ChangeMaxLife()
+    {
+        if (maxLife <= 5)
         {
-            Destroy(this.gameObject);
+            maxLife = 5;
         }
-
     }
 
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (invulnerableState == false && collision.gameObject.CompareTag("Enemy"))
         {
             ChangeLife(-1);
         }
@@ -43,11 +59,17 @@ public class PlayerLife : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("EnemyBullet"))
+        if (invulnerableState == false && other.gameObject.CompareTag("EnemyBullet"))
         {
             BulletBehaviourA enemyBullet = other.gameObject.GetComponent<BulletBehaviourA>();
             int damageRecieved = enemyBullet.Damage;
             ChangeLife(-damageRecieved);
+        }
+
+        if (other.gameObject.CompareTag("DeadZone"))
+        {
+            ChangeLife(-2);
+            transform.position = spawn.position;
         }
     }
 

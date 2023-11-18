@@ -18,7 +18,6 @@ public class EnemyNav : MonoBehaviour
     void Update()
     {
         FollowPlayer();
-        
     }
 
     void FollowPlayer()
@@ -31,6 +30,20 @@ public class EnemyNav : MonoBehaviour
         
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerShield"))
+        {
+            agent.speed = 0f;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerShield"))
+        {
+            agent.speed = 3.5f;
+        }
+    }
 
 }
