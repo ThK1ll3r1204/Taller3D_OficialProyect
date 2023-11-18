@@ -17,20 +17,21 @@ public class ScoreCounter : MonoBehaviour
 
     void Update()
     {
-        scoreUI.text = "Score: " + Score;
+        scoreUI.text = "Score: " + Score + " | x" + ((Mathf.FloorToInt(scoreMultiplierTimer) / 3) + 1);
         ScoreMultiplier();
     }
 
     public void AddScore(int value)
     {
-        if (scoreMultiplierTimer > 3f)
-        {
-            Score += value * 2;
-        }
-        else if (scoreMultiplierTimer < 3)
-        {
-            Score += value;
-        }
+        Score += value * ( ((Mathf.FloorToInt(scoreMultiplierTimer) / 3) + 1) >= 5 ? 5: ((Mathf.FloorToInt(scoreMultiplierTimer) / 3) + 1)); 
+        //if (scoreMultiplierTimer > 3f)
+        //{
+        //    Score += value * 2;
+        //}
+        //else if (scoreMultiplierTimer < 3)
+        //{
+        //    Score += value;
+        //}
     }
 
     void ScoreMultiplier()
@@ -40,6 +41,15 @@ public class ScoreCounter : MonoBehaviour
         {
             scoreMultiplierTimer = 0f;
         }
+    }
 
+    public void SaveHighScore()
+    {
+        int OldScore = PlayerPrefs.GetInt("highScore", 0);
+
+        if (OldScore < Score)
+        {
+            PlayerPrefs.SetInt("highScore", Score);
+        }
     }
 }

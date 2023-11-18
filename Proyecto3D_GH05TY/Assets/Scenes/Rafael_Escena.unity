@@ -886,7 +886,7 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: 3c8ca94051bc9174695f0a5b80a584ba, type: 3}
   - {fileID: 2869290604067840088, guid: 15be43d3249ffa34680bbaa7caacf6e4, type: 3}
   - {fileID: 2869290604067840088, guid: fdb0719704620904e9b03631b0d6deb4, type: 3}
-  spawnRate: 3
+  spawnRate: 1.5
   maxObjectsOnScreen: 20
   maxSpawnedObjects: 30
 --- !u!4 &887096052
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.05
+  m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 437ede3f79b742749a7d5766520153e7, type: 2}
   m_BuildHeightMesh: 0
@@ -1390,6 +1390,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741465986413652794, guid: dd08e7019a34913489579098256fb7dd,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 703.8729
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741465986413652794, guid: dd08e7019a34913489579098256fb7dd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 354.67407
       objectReference: {fileID: 0}
     - target: {fileID: 4683084604475865308, guid: dd08e7019a34913489579098256fb7dd,
         type: 3}

@@ -10,17 +10,20 @@ public class PlayerLife : MonoBehaviour
     public int currentLife;
     public bool invulnerableState;
     public Transform spawn;
+    ScoreCounter scoreScript;
 
     void Start()
     {
         invulnerableState = false;
         spawn = GameObject.Find("Spawn").GetComponent<Transform>();
+        scoreScript = GameObject.Find("ScoreManager").GetComponent<ScoreCounter>();
     }
 
     void Update()
     {
         if (currentLife <= 0)
         {
+            scoreScript.SaveHighScore();
             SceneManager.LoadScene("Menu");
             Destroy(gameObject);
 
@@ -66,11 +69,11 @@ public class PlayerLife : MonoBehaviour
             ChangeLife(-damageRecieved);
         }
 
-        if (other.gameObject.CompareTag("DeadZone"))
-        {
-            ChangeLife(-2);
-            transform.position = spawn.position;
-        }
+        //if (other.gameObject.CompareTag("DeadZone"))
+        //{
+        //    ChangeLife(-2);
+        //    transform.position = spawn.position;
+        //}
     }
 
 }
