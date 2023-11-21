@@ -23,14 +23,14 @@ public class GridScript : MonoBehaviour
 
     [SerializeField] int randomIndex;
 
-    int[,] grid1 = {  { 1, 1 },
+    int[,] grid1 = {  { 1, 4 },
                       { 1, 1 } };
 
-    int[,] grid2 = { { 2, 1 },
+    int[,] grid2 = { { 4, 1 },
                      { 1, 1 } };
 
     int[,] grid3 = { { 1, 1 },
-                     { 1, 1 } };
+                     { 1, 4 } };
 
     int[,] grid4 = { { 1, 2 },
                      { 1, 1 } };
@@ -52,10 +52,13 @@ public class GridScript : MonoBehaviour
     
     int[,] grid10 = { { 1, 1 },
                      { 1, 1 } };
+    
+    int[,] grid11 = { { 1, 1 },
+                     { 1, 4 } };
 
     void Start()
     {
-        arrayGridMatrix = new int[][,] { grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9, grid10 };
+        arrayGridMatrix = new int[][,] { grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9, grid10, grid11 };
         BobElConstructor = true;
     }
 
