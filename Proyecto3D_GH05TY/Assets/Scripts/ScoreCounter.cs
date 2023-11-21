@@ -35,18 +35,16 @@ public class ScoreCounter : MonoBehaviour
     {
         Score = 0;
         scoreMultiplierTimer = 0;
-        scoreUI= GameObject.Find("Score").GetComponent<Text>();
-        if ((scoreUI == null))
-        {
-            return;
-        }
+        
     }
 
     void Update()
     {
-        
-        
-        scoreUI = GameObject.Find("Score").GetComponent<Text>();
+        if ((scoreUI == null))
+        {
+            scoreUI = GameObject.Find("Score").GetComponent<Text>();
+            
+        }
         scoreUI.text = "Score: " + Score + " | x" + ((Mathf.FloorToInt(scoreMultiplierTimer) / 3) + 1);
         ScoreMultiplier();
 
