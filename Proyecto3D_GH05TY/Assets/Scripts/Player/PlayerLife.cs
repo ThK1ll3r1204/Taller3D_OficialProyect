@@ -24,7 +24,7 @@ public class PlayerLife : MonoBehaviour
         if (currentLife <= 0)
         {
             scoreScript.SaveHighScore();
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("MENUof");
             Destroy(gameObject);
 
         }

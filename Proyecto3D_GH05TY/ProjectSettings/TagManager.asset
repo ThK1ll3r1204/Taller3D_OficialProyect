@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - EnemyBullet
   - PowerUp
+  - PlayerLightBullet
+  - PlayerDarkBullet
+  - PlayerShield
+  - Wall
   layers:
   - Default
   - TransparentFX

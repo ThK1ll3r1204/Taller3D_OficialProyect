@@ -21,7 +21,7 @@ public class PowerUpSpawner : Spawner
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (gameManager.currentEnemies < maxObjectsOnScreen || totalSpawnedObjects < maxSpawnedObjects)
+            if (gameManager.currentEnemies < maxObjectsOnScreen || totalSpawnedObjects < maxSpawnedObjects && gameManager.CanSpawnPowerUps==true)
             {
                 int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
                 GameObject randomPrefab = gameObjectsPrefabs[randomIndex];

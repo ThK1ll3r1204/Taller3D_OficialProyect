@@ -13,19 +13,22 @@ public class Spawner : MonoBehaviour
     protected int totalSpawnedObjects;
     public int maxSpawnedObjects;
     protected GameManager gameManager;
+
     private void Start()
     {
-        StartCoroutine(SpawnObjects());
+        
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-    }
+        StartCoroutine(SpawnObjects());
 
+    }
+    
     protected virtual IEnumerator SpawnObjects()
     {
         while (true)
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (gameManager.currentEnemies < maxObjectsOnScreen || totalSpawnedObjects < maxSpawnedObjects)
+            if (gameManager.currentEnemies < maxObjectsOnScreen || totalSpawnedObjects < maxSpawnedObjects && gameManager.CanSpawn==true)
             {
                 int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
                 GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
@@ -33,6 +36,7 @@ public class Spawner : MonoBehaviour
                 totalSpawnedObjects++;
                 gameManager.currentEnemies++;
             }
+            
         }
 
     }

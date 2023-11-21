@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,6 +18,7 @@ public class EnemyNav : MonoBehaviour
 
     void Update()
     {
+        agent = GetComponent<NavMeshAgent>();
         FollowPlayer();
     }
 
@@ -26,6 +28,10 @@ public class EnemyNav : MonoBehaviour
         {
             _player = GameObject.Find("Player").GetComponent<Transform>();
             agent.destination = _player.position;
+        }
+        else
+        {
+            return;
         }
         
     }

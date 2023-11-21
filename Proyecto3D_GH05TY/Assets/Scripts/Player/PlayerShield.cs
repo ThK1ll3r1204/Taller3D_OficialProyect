@@ -8,7 +8,7 @@ public class PlayerShield : MonoBehaviour
     [SerializeField]
     private float shieldTimer;
     [SerializeField]
-    private float shieldTurnOff;
+    public float shieldTurnOff = 8f;
     PlayerLife player;
     [SerializeField]
     private float knockbackForce;

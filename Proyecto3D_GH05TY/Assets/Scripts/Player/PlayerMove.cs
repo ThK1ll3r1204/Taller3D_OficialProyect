@@ -26,6 +26,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        rb.useGravity = true;
         Movement();
         PlayerCanRotate();
 
@@ -37,7 +38,8 @@ public class PlayerMove : MonoBehaviour
 
     void Movement()
     {
-        Transform camTransform = Camera.main.transform;
+
+        Transform camTransform = FindAnyObjectByType<Camera>().GetComponent<Transform>();
 
         Vector3 forward = camTransform.forward;
         Vector3 right = camTransform.right;
@@ -65,7 +67,7 @@ public class PlayerMove : MonoBehaviour
     void PlayerCanRotate()
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = FindAnyObjectByType<Camera>().ScreenPointToRay(Input.mousePosition);
 
         if(Physics.Raycast(ray, out hit))
         {

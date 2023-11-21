@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 98140974}
   - component: {fileID: 98140975}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: NavMesh Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 849790192}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.24892, y: 70.44231, z: 51.09195}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 882211082}
   - component: {fileID: 882211080}
   - component: {fileID: 882211079}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: NavMeshBake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,17 +449,17 @@ PrefabInstance:
     - target: {fileID: 4274704457603496982, guid: cb43abece9d06054aaf4e03b6124dd02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.1
+      value: 42.4
       objectReference: {fileID: 0}
     - target: {fileID: 4274704457603496982, guid: cb43abece9d06054aaf4e03b6124dd02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.79
+      value: 6.22
       objectReference: {fileID: 0}
     - target: {fileID: 4274704457603496982, guid: cb43abece9d06054aaf4e03b6124dd02,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.06
+      value: 43.6
       objectReference: {fileID: 0}
     - target: {fileID: 4274704457603496982, guid: cb43abece9d06054aaf4e03b6124dd02,
         type: 3}
@@ -598,7 +598,7 @@ Transform:
   m_GameObject: {fileID: 1118596038}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.24892, y: 70.44231, z: 51.09195}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -724,30 +724,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2624068823804707331, guid: dd08e7019a34913489579098256fb7dd,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2624068823804707331, guid: dd08e7019a34913489579098256fb7dd,
-        type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3041842050581361208, guid: dd08e7019a34913489579098256fb7dd,
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1935591632}
     - target: {fileID: 4683084604475865308, guid: dd08e7019a34913489579098256fb7dd,
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683084604475865308, guid: dd08e7019a34913489579098256fb7dd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -908,8 +893,9 @@ GameObject:
   - component: {fileID: 1935591632}
   - component: {fileID: 1935591631}
   - component: {fileID: 1935591630}
+  - component: {fileID: 1935591634}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1026,13 +1012,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935591629}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.4438941, y: -0.28745955, z: 0.15284494, w: 0.83484346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 56, y: -38, z: 0}
+--- !u!114 &1935591634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935591629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6179053b847f146b3dee020849db53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewTarget: {fileID: 0}
+  TargetOffset: {x: 10, y: 21.5, z: -12}
+  cameraSpeed: 15
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
