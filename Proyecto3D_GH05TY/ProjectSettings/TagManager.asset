@@ -12,11 +12,13 @@ TagManager:
   - PlayerDarkBullet
   - PlayerShield
   - Wall
+  - floor
+  - DeadZone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - floor
   - Water
   - UI
   - 

@@ -16,22 +16,12 @@ public class GameManager : MonoBehaviour
     public int powerUps;
 
 
-    private void Awake()
-    {
-        if (GameManager.gameManager==null)
-        {
-            GameManager.gameManager = this;
-            DontDestroyOnLoad(gameObject);
-            gameManager=GetComponent<GameManager>();
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    
 
     void Start()
     {
+        currentEnemies = 0;
+        currentPowerUps = 0;
         spawner = FindAnyObjectByType<Spawner>();
         powerUpSpawner= FindAnyObjectByType<PowerUpSpawner>();
     }

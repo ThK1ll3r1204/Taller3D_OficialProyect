@@ -160,6 +160,7 @@ MonoBehaviour:
   - {fileID: 8211313123354603364, guid: ba841ee1c7f491e4f857dd330a62dbff, type: 3}
   spawnRate: 10
   maxObjectsOnScreen: 2
+  totalSpawnedObjects: 0
   maxSpawnedObjects: 8
 --- !u!4 &88813692
 Transform:
@@ -741,8 +742,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564397265}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20000002, y: 7.82, z: -8.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.19999981, y: 7.8199997, z: -8.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -835,6 +836,7 @@ MonoBehaviour:
   - {fileID: 2869290604067840088, guid: fdb0719704620904e9b03631b0d6deb4, type: 3}
   spawnRate: 1
   maxObjectsOnScreen: 10
+  totalSpawnedObjects: 0
   maxSpawnedObjects: 20
 --- !u!4 &887096052
 Transform:
@@ -1102,8 +1104,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb73035a9f03dc8419d9267c43bf2be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanSpawn: 0
+  CanSpawnPowerUps: 0
   currentEnemies: 0
   currentPowerUps: 0
+  enemies: 0
+  powerUps: 0
 --- !u!4 &1650705711
 Transform:
   m_ObjectHideFlags: 0
@@ -1112,7 +1118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650705709}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20.520535, y: 35.9, z: -20.944998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1621,7 +1627,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1650705711}
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
@@ -1636,4 +1641,5 @@ SceneRoots:
   - {fileID: 1975183096}
   - {fileID: 1970109395}
   - {fileID: 424029304}
+  - {fileID: 1650705711}
   - {fileID: 564397267}

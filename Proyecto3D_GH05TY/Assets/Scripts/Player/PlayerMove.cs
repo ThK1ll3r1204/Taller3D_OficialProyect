@@ -8,7 +8,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] PlayerLife playerLifeScript;
     [SerializeField] float velocidad;
-
+    [SerializeField] LayerMask floor;
+    [SerializeField] bool terrain;
     private Vector3 lastMoveDirection = Vector3.forward;
     [SerializeField]
     float dashDistance = 5.0f; 
@@ -26,7 +27,11 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        rb.useGravity = true;
+        terrain = Physics.Raycast(transform.position, -transform.up, 10f, floor);
+        if (terrain)
+        {
+            rb.AddForce(Vector3.down * 150);
+        }
         Movement();
         PlayerCanRotate();
 
@@ -38,6 +43,7 @@ public class PlayerMove : MonoBehaviour
 
     void Movement()
     {
+        
 
         Transform camTransform = FindAnyObjectByType<Camera>().GetComponent<Transform>();
 
@@ -103,5 +109,39 @@ public class PlayerMove : MonoBehaviour
 
         rb.velocity = Vector3.zero;
     }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

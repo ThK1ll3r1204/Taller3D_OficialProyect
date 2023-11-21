@@ -69,6 +69,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CuboHielo Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3223439990377964535, guid: 30f90f5b242eb754ab7017a3d698f769,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223439990377964535, guid: 30f90f5b242eb754ab7017a3d698f769,
+        type: 3}
+      propertyPath: m_TagString
+      value: floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4015814382820508194, guid: 30f90f5b242eb754ab7017a3d698f769,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

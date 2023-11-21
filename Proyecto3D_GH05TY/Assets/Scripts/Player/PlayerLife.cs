@@ -69,11 +69,13 @@ public class PlayerLife : MonoBehaviour
             ChangeLife(-damageRecieved);
         }
 
-        //if (other.gameObject.CompareTag("DeadZone"))
-        //{
-        //    ChangeLife(-2);
-        //    transform.position = spawn.position;
-        //}
+        if (other.gameObject.CompareTag("DeadZone"))
+        {
+            transform.position = spawn.position;
+            ChangeLife(-2);
+        }
     }
+
+
 
 }

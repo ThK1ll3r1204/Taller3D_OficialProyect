@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     protected float spawnRate;
     [SerializeField]
     protected int maxObjectsOnScreen;
-    protected int totalSpawnedObjects;
+    [SerializeField] protected int totalSpawnedObjects;
     public int maxSpawnedObjects;
     protected GameManager gameManager;
 
@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (gameManager.currentEnemies < maxObjectsOnScreen || totalSpawnedObjects < maxSpawnedObjects && gameManager.CanSpawn==true)
+            if (gameManager.currentEnemies < maxObjectsOnScreen || totalSpawnedObjects <= maxSpawnedObjects && gameManager.CanSpawn==true)
             {
                 int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
                 GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
