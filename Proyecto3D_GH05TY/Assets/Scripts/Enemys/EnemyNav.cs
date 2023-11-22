@@ -21,6 +21,7 @@ public class EnemyNav : MonoBehaviour
         _player = GameObject.Find("Player").GetComponent<Transform>();
 
         agent = GetComponent<NavMeshAgent>();
+
         FollowPlayer();
     }
 

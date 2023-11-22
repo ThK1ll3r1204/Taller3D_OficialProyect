@@ -1,0 +1,13 @@
+# Exported from Nomad Sculpt
+
+newmtl Cuerpo_1
+ map_Kd Cuerpo_1_color.png
+ map_roughness Cuerpo_1_roughness.png
+ map_tangentSpaceNormal Cuerpo_1_normal.png
+
+newmtl Ojos_AD_1
+ map_Kd Ojos_AD_1_color.png
+ map_roughness Ojos_AD_1_roughness.png
+ map_tangentSpaceNormal Ojos_AD_1_normal.png
+
+newmtl Ojos_1

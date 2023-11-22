@@ -1,0 +1,25 @@
+# Exported from Nomad Sculpt
+
+newmtl Mano_2
+ map_Kd Mano_2_color_1.png
+ map_roughness Mano_2_roughness_1.png
+
+newmtl Mano_3
+ map_Kd Mano_3_color_3.png
+ map_roughness Mano_3_roughness_3.png
+
+newmtl Cabeza_1
+ map_Kd Cabeza_1_color.png
+ map_roughness Cabeza_1_roughness.png
+
+newmtl Cuerpo_1
+ map_Kd Cuerpo_1_color_1.png
+ map_roughness Cuerpo_1_roughness_1.png
+
+newmtl Ojos_1
+ map_Kd Ojos_1_color.png
+ map_roughness Ojos_1_roughness.png
+
+newmtl Ojos_2
+ map_Kd Ojos_2_color_1.png
+ map_roughness Ojos_2_roughness_1.png
