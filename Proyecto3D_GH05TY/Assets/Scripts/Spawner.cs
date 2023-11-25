@@ -16,10 +16,8 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         StartCoroutine(SpawnObjects());
-
     }
     
     protected virtual IEnumerator SpawnObjects()

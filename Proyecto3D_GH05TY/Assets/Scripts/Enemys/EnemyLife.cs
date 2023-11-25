@@ -15,11 +15,13 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] int pointsGiven;
     ScoreCounter scoreScript;
     GameManager gameManager;
+    RoundCounterManager roundManager;
 
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         scoreScript = GameObject.Find("ScoreManager").GetComponent<ScoreCounter>();
+        roundManager = GameObject.Find("RoundManager").GetComponent<RoundCounterManager>();
     }
 
     void Update()
@@ -40,7 +42,7 @@ public class EnemyLife : MonoBehaviour
         {
             gameManager.currentEnemies--;
             scoreScript.scoreMultiplierTimer++;
-            scoreScript.enemyKilled++;
+            roundManager.enemyKilled++;
             scoreScript.AddScore(pointsGiven);
             Destroy(this.gameObject);
         }

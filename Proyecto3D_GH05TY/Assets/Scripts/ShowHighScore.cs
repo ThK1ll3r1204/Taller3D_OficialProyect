@@ -12,9 +12,4 @@ public class ShowHighScore : MonoBehaviour
     {
         highScoreUI.text = "" + PlayerPrefs.GetInt("highScore", 0);
     }
-
-    void Update()
-    {
-        
-    }
 }

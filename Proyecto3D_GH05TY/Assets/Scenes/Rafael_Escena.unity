@@ -731,12 +731,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02017175a07f2c44bdfcce4036bbca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: 0
   scoreUI: {fileID: 540051691}
+  scoreMultiplierUI: {fileID: 1970109396}
   scoreMultiplierTimer: 0
-  enemyKilled: 0
-  enemiesToKill: 0
-  round: 0
 --- !u!4 &564397267
 Transform:
   m_ObjectHideFlags: 0
@@ -1292,16 +1289,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1741465986413652794, guid: dd08e7019a34913489579098256fb7dd,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 703.8729
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741465986413652794, guid: dd08e7019a34913489579098256fb7dd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 354.67407
-      objectReference: {fileID: 0}
     - target: {fileID: 4683084604475865308, guid: dd08e7019a34913489579098256fb7dd,
         type: 3}
       propertyPath: m_Name
@@ -1312,6 +1299,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd08e7019a34913489579098256fb7dd, type: 3}
+--- !u!114 &1970109396 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 388050922067677733, guid: dd08e7019a34913489579098256fb7dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1970109395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1975183092
 GameObject:
   m_ObjectHideFlags: 0

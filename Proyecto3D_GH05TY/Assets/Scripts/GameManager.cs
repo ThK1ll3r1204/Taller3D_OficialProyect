@@ -15,9 +15,6 @@ public class GameManager : MonoBehaviour
     public int enemies;
     public int powerUps;
 
-
-    
-
     void Start()
     {
         currentEnemies = 0;

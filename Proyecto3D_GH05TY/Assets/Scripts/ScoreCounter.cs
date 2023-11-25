@@ -6,34 +6,23 @@ using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public int Score;
+    public static int Score;
     [SerializeField]
     private Text scoreUI;
+    [SerializeField]
+    private Text scoreMultiplierUI;
     public float scoreMultiplierTimer;
-    public int enemyKilled;
-    public int enemiesToKill;
-    public int round;
-    [SerializeField] static ScoreCounter scoreCounter;
-
-    void Awake()
-    {
-        if (ScoreCounter.scoreCounter == null)
-        {
-            round = 1;
-            scoreCounter = this;
-            enemiesToKill = 10;
-            DontDestroyOnLoad(gameObject);
-            scoreCounter=GetComponent<ScoreCounter>(); 
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
+    RoundCounterManager roundManager;
+    
     void Start()
     {
-        Score = 0;
+        roundManager = GameObject.Find("RoundManager").GetComponent<RoundCounterManager>();
+
+        if (roundManager.round == 1)
+        {
+            Score = 0;
+        }
+        
         scoreMultiplierTimer = 0;
         
     }
@@ -43,34 +32,12 @@ public class ScoreCounter : MonoBehaviour
         if ((scoreUI == null))
         {
             scoreUI = GameObject.Find("Score").GetComponent<Text>();
-            
+            scoreMultiplierUI = GameObject.Find("ScoreMultiplier").GetComponent<Text>();
         }
-        scoreUI.text = "Score: " + Score + " | x" + ((Mathf.FloorToInt(scoreMultiplierTimer) / 3) + 1);
+        
+        scoreUI.text = "Score: " + Score;
+        scoreMultiplierUI.text = "x" + ((Mathf.FloorToInt(scoreMultiplierTimer) / 3) + 1);
         ScoreMultiplier();
-
-        if (enemyKilled >= enemiesToKill)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            round ++;
-            enemyKilled = 0;
-            enemiesToKill += 2;
-        }
-        else
-        {
-            return;
-        }
-        for (round = 1; round <= 1; round++)
-        {
-            // Verificar si round es un múltiplo de 3
-            if (round % 2 == 0)
-            {
-                // Aumentar enemiesToKill en 2
-                enemiesToKill += 2;
-
-                // Puedes agregar aquí cualquier otra lógica que desees ejecutar cuando round sea un múltiplo de 3.
-            }
-        }
-
     }
 
     public void AddScore(int value)
