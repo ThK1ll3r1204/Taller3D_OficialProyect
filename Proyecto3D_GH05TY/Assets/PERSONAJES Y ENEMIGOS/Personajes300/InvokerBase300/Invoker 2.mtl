@@ -1,0 +1,10 @@
+# Exported from Nomad Sculpt
+
+newmtl Cabeza_1
+ map_Kd Cabeza_1_color_1.png
+
+newmtl Ojos_1
+ map_Kd Ojos_1_color_4.png
+
+newmtl Baculo_2
+ map_Kd Baculo_2_color_1.png

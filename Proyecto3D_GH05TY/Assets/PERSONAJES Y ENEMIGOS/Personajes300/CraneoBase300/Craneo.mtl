@@ -1,0 +1,4 @@
+# Exported from Nomad Sculpt
+
+newmtl Sphere_1
+ map_Kd Sphere_1_color_1.png

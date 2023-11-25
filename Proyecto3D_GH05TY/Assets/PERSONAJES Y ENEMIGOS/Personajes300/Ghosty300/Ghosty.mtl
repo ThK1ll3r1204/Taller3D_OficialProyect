@@ -1,0 +1,7 @@
+# Exported from Nomad Sculpt
+
+newmtl Cuerpo
+ map_Kd Cuerpo_color_2.png
+
+newmtl Ojos
+ map_Kd Ojos_color_1.png

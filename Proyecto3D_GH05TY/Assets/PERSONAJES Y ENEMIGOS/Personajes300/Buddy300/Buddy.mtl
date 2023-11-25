@@ -1,0 +1,13 @@
+# Exported from Nomad Sculpt
+
+newmtl Ojos_boca_1
+ map_Kd Ojos_boca_1_color_1.png
+ map_tangentSpaceNormal Ojos_boca_1_normal_1.png
+
+newmtl Flama_1
+ map_Kd Flama_1_color.png
+ map_tangentSpaceNormal Flama_1_normal.png
+
+newmtl Buddy_Cuerpo_1
+ map_Kd Buddy_Cuerpo_1_color_1.png
+ map_tangentSpaceNormal Buddy_Cuerpo_1_normal_1.png
