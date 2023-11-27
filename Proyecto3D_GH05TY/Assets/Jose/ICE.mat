@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ice
+  m_Name: ICE
   m_Shader: {fileID: -6465566751694194690, guid: a78c33652edfbb84a948815b2183d86f,
     type: 3}
   m_Parent: {fileID: 0}
@@ -170,4 +170,5 @@ Material:
     - _Rock_Color: {r: 0, g: 0.8542309, b: 1, a: 1}
     - _Shard_Color: {r: 0, g: 0.7482281, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Speed: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
