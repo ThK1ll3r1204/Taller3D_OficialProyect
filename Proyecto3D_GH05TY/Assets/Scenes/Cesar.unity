@@ -333,12 +333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedc31b99a793c747a6e69c51f7825cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 4014904182530991591, guid: 7d4061b06ef50004d96e9eff2864c465,
-    type: 3}
+  cubePrefab: []
   iceBlockPrefab: {fileID: 4195486417137123862, guid: c6cf6efbb4d15b44faae19e887e1b9c9,
     type: 3}
-  MudBlockPrefab: {fileID: 905663998712702562, guid: a1e04f7cacb0111418afa4990b9f520e,
-    type: 3}
+  MudBlockPrefab: []
   emptyBlockPrefab: {fileID: 4735255551275142296, guid: b4954b65fcd2bb542b1e7e4813a86790,
     type: 3}
   gridSize: 10
@@ -346,37 +344,6 @@ MonoBehaviour:
   BobElConstructor: 1
   g: 01000000020000000300000004000000
   randomIndex: 0
---- !u!1 &174358647
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 174358648}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &174358648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174358647}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -143.91, y: 5.71, z: 3.32}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &396329446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1356,7 +1323,6 @@ SceneRoots:
   - {fileID: 1118596040}
   - {fileID: 1336020512}
   - {fileID: 396329446}
-  - {fileID: 174358648}
   - {fileID: 1936546474}
   - {fileID: 159278800}
   - {fileID: 1649540707}

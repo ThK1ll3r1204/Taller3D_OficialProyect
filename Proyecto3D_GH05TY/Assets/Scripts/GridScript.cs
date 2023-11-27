@@ -7,9 +7,9 @@ using UnityEngine;
 public class GridScript : MonoBehaviour
 {
 
-    [SerializeField] GameObject cubePrefab;
+    [SerializeField] GameObject[] cubePrefab;
     [SerializeField] GameObject iceBlockPrefab;
-    [SerializeField] GameObject MudBlockPrefab;
+    [SerializeField] GameObject[] MudBlockPrefab;
     [SerializeField] GameObject emptyBlockPrefab;
     public int gridSize = 10;
     public float delay = 0.5f;
@@ -95,7 +95,7 @@ public class GridScript : MonoBehaviour
 
                         if (blockType == 1)
                         {
-                            Instantiate(cubePrefab, spawnPosition, Quaternion.identity);
+                            Instantiate(cubePrefab[Random.Range(0, cubePrefab.Length)], spawnPosition, Quaternion.identity);
 
                         }
                         else if (blockType == 2)
@@ -110,12 +110,12 @@ public class GridScript : MonoBehaviour
                         }
                         else if (blockType == 4)
                         {
-                            Instantiate(MudBlockPrefab, spawnPosition, Quaternion.identity);
+                            Instantiate(MudBlockPrefab[Random.Range(0, MudBlockPrefab.Length)], spawnPosition, Quaternion.identity);
 
                         }
                         else
                         {
-                            Instantiate(cubePrefab, spawnPosition, Quaternion.identity);                  
+                            Instantiate(cubePrefab[Random.Range(0, cubePrefab.Length)], spawnPosition, Quaternion.identity);                  
 
                         }
 
