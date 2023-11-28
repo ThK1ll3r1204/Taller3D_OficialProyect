@@ -8,16 +8,16 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] PlayerLife playerLifeScript;
     [SerializeField] float velocidad;
-    [SerializeField] LayerMask floor;
     [SerializeField] bool terrain;
     private Vector3 lastMoveDirection = Vector3.forward;
     [SerializeField]
-    float dashDistance = 5.0f; 
+    public float dashDistance = 5.0f; 
     [SerializeField]
-    float dashDuration = 0.5f; 
+    public float dashDuration = 0.5f; 
     [SerializeField]
     float dashCooldown = 2.0f; 
-    private bool canDash = true; 
+    private bool canDash = true;
+
 
     void Start()
     {
@@ -27,11 +27,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        terrain = Physics.Raycast(transform.position, -transform.up, 10f, floor);
-        if (terrain)
-        {
-            rb.AddForce(Vector3.down * 150);
-        }
+        
         Movement();
         PlayerCanRotate();
 
@@ -43,7 +39,7 @@ public class PlayerMove : MonoBehaviour
 
     void Movement()
     {
-        
+
 
         Transform camTransform = FindAnyObjectByType<Camera>().GetComponent<Transform>();
 
@@ -65,8 +61,10 @@ public class PlayerMove : MonoBehaviour
         {
             lastMoveDirection = movimiento;
         }
+        float y = rb.velocity.y;
+        rb.velocity = (movimiento * velocidad)+new Vector3(0,y,0);
+        
 
-        rb.velocity = movimiento * velocidad;
 
     }
 

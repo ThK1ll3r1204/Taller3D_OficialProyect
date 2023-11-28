@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.5169983
+      value: 35.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
         type: 3}
@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.2321568
+      value: 135.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
         type: 3}
@@ -58,10 +58,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6864227038933439628, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.56
+      objectReference: {fileID: 0}
+    - target: {fileID: -1895998963989102157, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.469787
+      objectReference: {fileID: 0}
+    - target: {fileID: -140002130138740444, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.72506
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
         type: 3}
       propertyPath: m_Name
       value: Lodo con Totem y cruces
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153655314655673924, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491796609182174715, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.72506
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837375951668079831, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.44246
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -70,7 +100,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4889603250251472987}
+      addedObject: {fileID: 3174170908687862882}
+    - targetCorrespondingSourceObject: {fileID: -2964176227353291631, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4418018105525156657}
   m_SourcePrefab: {fileID: 100100000, guid: 9938b8c6c20f2cd498b7f0859c2aa107, type: 3}
 --- !u!1 &420663694880894057 stripped
 GameObject:
@@ -78,7 +112,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 655017246901031224}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &4889603250251472987
+--- !u!64 &3174170908687862882
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,3 +134,31 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &6902390789007558057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2964176227353291631, guid: 9938b8c6c20f2cd498b7f0859c2aa107,
+    type: 3}
+  m_PrefabInstance: {fileID: 655017246901031224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4418018105525156657
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6902390789007558057}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6625123404564316507, guid: a5c1cabfb8135424980ccb6add15ddee, type: 3}
