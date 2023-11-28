@@ -206,4 +206,4 @@ MonoBehaviour:
     type: 3}
   shootRate: 1
   shootNow: 0
-  enemyBulletSpeed: 3
+  enemyBulletSpeed: 20

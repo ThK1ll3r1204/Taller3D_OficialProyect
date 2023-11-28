@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9bc946eb8b6b54e8d5f2fd5b99a6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 3
+  bulletSpeed: 0
   bulletMaxRange: 30
   collisionTag: Player
   Damage: 2

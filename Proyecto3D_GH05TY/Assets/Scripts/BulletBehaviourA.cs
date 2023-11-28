@@ -23,7 +23,7 @@ public class BulletBehaviourA : MonoBehaviour
 
     void BulletMovement()
     {
-        transform.Translate(bulletSpeed * Time.deltaTime * Vector3.forward);
+        transform.Translate(bulletSpeed * Vector3.forward * Time.deltaTime );
 
         if (Vector3.Distance(startPoint, transform.position) > bulletMaxRange)
         {

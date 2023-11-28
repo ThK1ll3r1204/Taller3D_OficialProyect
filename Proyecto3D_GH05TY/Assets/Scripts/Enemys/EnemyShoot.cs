@@ -31,7 +31,7 @@ public class EnemyShoot : MonoBehaviour
         {
             GameObject newProjectile = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
             Rigidbody projectileRigidbody = newProjectile.GetComponent<Rigidbody>();
-            Vector3 playerDirection = player.position - transform.position;
+            Vector3 playerDirection = (player.position - transform.position).normalized;
             projectileRigidbody.velocity = playerDirection * enemyBulletSpeed;
             shootNow = 0f;
         }
