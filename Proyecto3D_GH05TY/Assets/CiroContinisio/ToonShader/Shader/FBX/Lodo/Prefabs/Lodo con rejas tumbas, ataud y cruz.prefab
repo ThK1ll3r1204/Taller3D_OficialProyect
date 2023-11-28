@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fa9efaf4e1eb69847a0cef4d4d0acb88,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.5169983
+      value: -72.25712
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa9efaf4e1eb69847a0cef4d4d0acb88,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8026886
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa9efaf4e1eb69847a0cef4d4d0acb88,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.2321568
+      value: -141.22057
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa9efaf4e1eb69847a0cef4d4d0acb88,
         type: 3}
@@ -66,5 +66,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa9efaf4e1eb69847a0cef4d4d0acb88,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7011655844566198401}
   m_SourcePrefab: {fileID: 100100000, guid: fa9efaf4e1eb69847a0cef4d4d0acb88, type: 3}
+--- !u!1 &2944653946851034753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa9efaf4e1eb69847a0cef4d4d0acb88,
+    type: 3}
+  m_PrefabInstance: {fileID: 2602213036333677520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7011655844566198401
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2944653946851034753}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
