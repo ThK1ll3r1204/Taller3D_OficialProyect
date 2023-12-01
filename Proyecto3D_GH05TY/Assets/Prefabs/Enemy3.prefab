@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: 6924b4fbabe794f44b91313f45280175, type: 3}
   spawnRate: 5
   maxObjectsOnScreen: 10
-  totalSpawnedObjects: 0
+  SpawnedObjectsCounter: 0
   maxSpawnedObjects: 8
 --- !u!1 &2825829928431515059
 GameObject:
@@ -100,7 +100,7 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: 6924b4fbabe794f44b91313f45280175, type: 3}
   spawnRate: 5
   maxObjectsOnScreen: 10
-  totalSpawnedObjects: 0
+  SpawnedObjectsCounter: 0
   maxSpawnedObjects: 8
 --- !u!1 &2869290604067840088
 GameObject:
@@ -149,7 +149,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2869290604067840088}
-  m_Mesh: {fileID: -4500032189159223247, guid: fe46aed8e05e9fe4fa7a46313f63bd72, type: 3}
+  m_Mesh: {fileID: -1168028429364728551, guid: efe874c541d2f25429f01e4158baee3b, type: 3}
 --- !u!23 &5333953830342332350
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b54c067ce9fe0ef49bec2b385d4ed408, type: 2}
+  - {fileID: 2100000, guid: 3fc17d066328d0f4a87fc1ef874929d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
