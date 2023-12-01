@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: fcae79bbdb524a248af1c54b97e399f3
+guid: cca68944fdc5ce945ae823e95c234f34
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuerpo_1
+    second: {fileID: 2100000, guid: 50c9b60c1df2c4a42a764140000ffa85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ojos_1
+    second: {fileID: 2100000, guid: 327daa43c3f73ae458424bb0a239deae, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
