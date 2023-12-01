@@ -42,7 +42,6 @@ public class EnemyLife : MonoBehaviour
         {
             gameManager.currentEnemies--;
             scoreScript.scoreMultiplierTimer++;
-            roundManager.enemyKilled++;
             scoreScript.AddScore(pointsGiven);
             Destroy(this.gameObject);
         }

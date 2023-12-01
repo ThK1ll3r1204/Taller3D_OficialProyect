@@ -51,7 +51,7 @@ public class PowerUp : MonoBehaviour
                 break;
 
             case PowerUpsList.Curar:
-                playerLifeScript.currentLife += 10;
+                playerLifeScript.currentLife += 1;
                 activePowerUp = PowerUpsList.NoPower;
                 break;
 
@@ -88,8 +88,12 @@ public class PowerUp : MonoBehaviour
             }
             else if (powerUpAdquired.PowerUpIdentification == PowerUpsName.Curar)
             {
-                activePowerUp = PowerUpsList.Curar;
-                Destroy(other.gameObject);
+                if (playerLifeScript.currentLife < playerLifeScript.maxLife)
+                {
+                    activePowerUp = PowerUpsList.Curar;
+                    Destroy(other.gameObject);
+                }
+                
             }
             else if (powerUpAdquired.PowerUpIdentification == PowerUpsName.VidaAumentada)
             {

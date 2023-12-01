@@ -6,51 +6,35 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
-    PowerUpSpawner powerUpSpawner;
     Spawner spawner;
-    public bool CanSpawn;
-    public bool CanSpawnPowerUps;
+    RoundCounterManager roundCounterScript;
     public int currentEnemies;
     public int currentPowerUps;
-    public int enemies;
-    public int powerUps;
+    public int enemiesOnTheScene;
 
     void Start()
     {
-        currentEnemies = 0;
-        currentPowerUps = 0;
         spawner = FindAnyObjectByType<Spawner>();
-        powerUpSpawner= FindAnyObjectByType<PowerUpSpawner>();
+        roundCounterScript = FindAnyObjectByType<RoundCounterManager>();
     }
 
-    void Update()
+    private void Update()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        powerUps = GameObject.FindGameObjectsWithTag("PowerUp").Length;
+        if (spawner.SpawnedObjectsCounter >= spawner.maxSpawnedObjects || currentEnemies == 0)
+        {
+            SecondCheckForEnemies();
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("Rafael_Escena");
         }
-        
-        if(powerUps>= 2)
-        {
-            CanSpawnPowerUps = false;
-        }
-        else
-        {
-            CanSpawnPowerUps= true;
-        }
+    }
 
-        if(enemies>=10f)
-        {
-            CanSpawn = false;
-        }
-        else
-        {
-            CanSpawn= true;
-        }
+    public void SecondCheckForEnemies()
+    {
+        enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
+        if (enemiesOnTheScene <= 0)
+        {
+            roundCounterScript.RoundSucceeded();
+        }
     }
     
 }
