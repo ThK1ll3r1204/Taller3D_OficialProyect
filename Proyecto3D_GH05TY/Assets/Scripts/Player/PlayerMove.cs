@@ -19,6 +19,8 @@ public class PlayerMove : MonoBehaviour
     public bool isCollidingWithSlippery = false;
     public bool isCollidingWithSlow = false;
     [SerializeField] private float stoppingSpeed = 2.0f;
+    private float slipperyTimer = 2f;
+    private float slipperySpeed = 4f;
 
 
     void Start()
@@ -60,6 +62,7 @@ public class PlayerMove : MonoBehaviour
         if (movimiento != Vector3.zero)
         {
             lastMoveDirection = movimiento;
+            slipperyTimer = 2;
         }
         float y = rb.velocity.y;
         rb.velocity = (movimiento * velocidad)+new Vector3(0,y,0);
@@ -123,8 +126,15 @@ public class PlayerMove : MonoBehaviour
 
     void SlipperyFriction()
     {
-        Debug.Log("Toco Slippery");
-        rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, stoppingSpeed * Time.deltaTime);
+        slipperyTimer -= Time.deltaTime;
+        if (slipperyTimer >= 0)
+        {
+            Debug.Log("Toco Slippery");
+            Vector3 oldVelocity = rb.velocity;
+            rb.velocity = rb.velocity + lastMoveDirection * slipperyTimer * slipperySpeed;
+        }
+        
+
     }
 
 }
