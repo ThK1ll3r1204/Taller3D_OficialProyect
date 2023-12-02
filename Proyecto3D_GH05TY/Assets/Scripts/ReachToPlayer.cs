@@ -8,6 +8,10 @@ public class ReachToPlayer : MonoBehaviour
 
     public float speed = 1f;
 
+    public void Start()
+    {
+        Player = GameObject.Find("Player").GetComponent<Transform>();
+    }
     void Update()
     {
         if (Player != null)

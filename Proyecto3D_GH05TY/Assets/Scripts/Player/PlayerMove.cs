@@ -19,12 +19,17 @@ public class PlayerMove : MonoBehaviour
     public bool isCollidingWithSlippery = false;
     public bool isCollidingWithSlow = false;
     [SerializeField] private float stoppingSpeed = 2.0f;
+<<<<<<< Updated upstream
     private float slipperyTimer = 2f;
     private float slipperySpeed = 4f;
+=======
+    float velocidadInicial;
+>>>>>>> Stashed changes
 
 
     void Start()
     {
+        velocidadInicial = velocidad;
         rb= GetComponent<Rigidbody>();
         playerLifeScript = GetComponent<PlayerLife>();
     }
@@ -76,11 +81,11 @@ public class PlayerMove : MonoBehaviour
         //Slow
         if (isCollidingWithSlow == true)
         {
-            velocidad = 5f;
+            velocidad = velocidadInicial / 2;
         }
         else if (isCollidingWithSlow == false)
         {
-            velocidad = 10f;
+            velocidad = velocidadInicial;
         }
     }
 

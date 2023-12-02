@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    GrillaController grillaController;
     public static GameManager gameManager;
     Spawner spawner;
     RoundCounterManager roundCounterScript;
@@ -14,18 +15,20 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        grillaController = FindAnyObjectByType<GrillaController>();
         spawner = FindAnyObjectByType<Spawner>();
         roundCounterScript = FindAnyObjectByType<RoundCounterManager>();
     }
 
     private void Update()
     {
-        if (spawner.SpawnedObjectsCounter >= spawner.maxSpawnedObjects || currentEnemies == 0)
+        
+        if (spawner.SpawnedObjectsCounter >= spawner.maxSpawnedObjects && currentEnemies <= 0 && grillaController.gridFinish==true)
         {
             SecondCheckForEnemies();
-        }
+        }        
     }
-
+    
     public void SecondCheckForEnemies()
     {
         enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;
