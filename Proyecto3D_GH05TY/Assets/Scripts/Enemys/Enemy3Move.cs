@@ -13,6 +13,15 @@ public class Enemy3Move : MonoBehaviour
     [SerializeField]
     private float changeDirectionTimer;
     private Rigidbody rb;
+    public bool enableLastBehaviour = false;
+
+    public GameObject enemyBulletPrefab;
+    [SerializeField]
+    float shootRate;
+    [SerializeField]
+    float shootNow;
+    [SerializeField]
+    float enemyBulletSpeed;
 
     private void Start()
     {
@@ -24,6 +33,11 @@ public class Enemy3Move : MonoBehaviour
     private void Update()
     {
         Movement();
+
+        if(enableLastBehaviour == true)
+        {
+            LastBehaviour();
+        }
         
     }
 
@@ -77,6 +91,20 @@ public class Enemy3Move : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerShield"))
         {
             moveSpeed = 3.5f;
+        }
+    }
+
+    void LastBehaviour()
+    {
+        shootNow += Time.deltaTime;
+
+        if (shootNow >= shootRate && player != null)
+        {
+            GameObject newProjectile = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            Rigidbody projectileRigidbody = newProjectile.GetComponent<Rigidbody>();
+            Vector3 playerDirection = (player.position - transform.position).normalized;
+            projectileRigidbody.velocity = playerDirection * enemyBulletSpeed;
+            shootNow = 0f;
         }
     }
 }
