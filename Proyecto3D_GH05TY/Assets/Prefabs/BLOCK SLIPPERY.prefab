@@ -8,69 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6847651373867457162}
     m_Modifications:
-    - target: {fileID: 5408808219057717, guid: bd01efe1f08fb444aa01a343f13ffa56, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4068373912626513877, guid: 29a90a1542aa4fc44bc4aaf3f52f1828,
-        type: 3}
-    - target: {fileID: 5408808219057717, guid: bd01efe1f08fb444aa01a343f13ffa56, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 37964be233338804da12741089947b79, type: 2}
     - target: {fileID: 627500682214297205, guid: bd01efe1f08fb444aa01a343f13ffa56,
         type: 3}
       propertyPath: m_Name
       value: Sparks
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: ShapeModule.type
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: ShapeModule.m_Scale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: ShapeModule.m_Scale.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: ShapeModule.m_Rotation.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: NoiseModule.strength.scalar
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861263892142321307, guid: bd01efe1f08fb444aa01a343f13ffa56,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3236754024377525902, guid: bd01efe1f08fb444aa01a343f13ffa56,
         type: 3}
@@ -199,7 +140,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7360c238856910044b4c5b19fcf35d37,
         type: 3}
       propertyPath: m_Name
-      value: SLIPPERY BLOCK
+      value: BLOCK SLIPPERY
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -213,6 +154,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5703085585889881611}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7360c238856910044b4c5b19fcf35d37,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7373291885063394876}
   m_SourcePrefab: {fileID: 100100000, guid: 7360c238856910044b4c5b19fcf35d37, type: 3}
 --- !u!1 &6074350980196302896 stripped
 GameObject:
@@ -242,6 +187,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2177313970649798053, guid: 7360c238856910044b4c5b19fcf35d37, type: 3}
+--- !u!114 &7373291885063394876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074350980196302896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8835f4fceaabb44caab2054f2187fb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockIdentification: 1
 --- !u!4 &6847651373867457162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7360c238856910044b4c5b19fcf35d37,

@@ -16,7 +16,7 @@ public class Enemy3Move : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         ChangeDirection();
     }

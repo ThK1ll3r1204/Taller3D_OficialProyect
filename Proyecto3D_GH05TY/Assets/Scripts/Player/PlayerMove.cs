@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
     [SerializeField] Rigidbody rb;
     [SerializeField] PlayerLife playerLifeScript;
     [SerializeField] float velocidad;
@@ -17,6 +16,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float dashCooldown = 2.0f; 
     private bool canDash = true;
+    public bool isCollidingWithSlippery = false;
+    public bool isCollidingWithSlow = false;
+    [SerializeField] private float stoppingSpeed = 2.0f;
 
 
     void Start()
@@ -39,8 +41,6 @@ public class PlayerMove : MonoBehaviour
 
     void Movement()
     {
-
-
         Transform camTransform = FindAnyObjectByType<Camera>().GetComponent<Transform>();
 
         Vector3 forward = camTransform.forward;
@@ -63,9 +63,22 @@ public class PlayerMove : MonoBehaviour
         }
         float y = rb.velocity.y;
         rb.velocity = (movimiento * velocidad)+new Vector3(0,y,0);
-        
 
+        //Slippery
+        if (isCollidingWithSlippery == true && movimiento == Vector3.zero)
+        {
+            SlipperyFriction();
+        }
 
+        //Slow
+        if (isCollidingWithSlow == true)
+        {
+            velocidad = 5f;
+        }
+        else if (isCollidingWithSlow == false)
+        {
+            velocidad = 10f;
+        }
     }
 
     void PlayerCanRotate()
@@ -108,38 +121,10 @@ public class PlayerMove : MonoBehaviour
         rb.velocity = Vector3.zero;
     }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    void SlipperyFriction()
+    {
+        Debug.Log("Toco Slippery");
+        rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, stoppingSpeed * Time.deltaTime);
+    }
 
 }
