@@ -9,7 +9,6 @@ public class GrillaController : MonoBehaviour
     [SerializeField] GameObject[] HazardBlockPrefab;
     [SerializeField] GameObject EnemyBlockPrefab;
     [SerializeField] GameObject PowerBlockPrefab;
-    [SerializeField] GameObject emptyBlockPrefab;
     public int gridSize = 10;
     public float delay = 0.5f;
     //public NavMeshSurface xd;

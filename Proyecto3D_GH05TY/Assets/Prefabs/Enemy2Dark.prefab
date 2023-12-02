@@ -207,3 +207,8 @@ MonoBehaviour:
   shootRate: 1
   shootNow: 0
   enemyBulletSpeed: 20
+  detectionRadius: 8.31
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  agent: {fileID: 0}

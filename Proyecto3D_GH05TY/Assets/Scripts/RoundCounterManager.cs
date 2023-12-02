@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RoundCounterManager : MonoBehaviour
 {
     public int round;
-    GameManager gameManagerScript;
 
     private void Awake()
     {
@@ -15,7 +12,6 @@ public class RoundCounterManager : MonoBehaviour
 
     void Start()
     {
-        gameManagerScript = FindAnyObjectByType<GameManager>();
         round = 1;
     }
 

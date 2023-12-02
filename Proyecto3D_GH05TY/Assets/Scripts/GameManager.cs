@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
         if (spawner.SpawnedObjectsCounter >= spawner.maxSpawnedObjects || currentEnemies == 0)
         {
             SecondCheckForEnemies();
-
         }
     }
 

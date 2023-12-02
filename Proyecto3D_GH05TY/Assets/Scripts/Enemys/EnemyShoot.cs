@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
@@ -12,14 +11,29 @@ public class EnemyShoot : MonoBehaviour
     float shootNow;
     [SerializeField]
     float enemyBulletSpeed;
+    [SerializeField] float detectionRadius = 5f;
+    [SerializeField] LayerMask playerLayer;
+    [SerializeField] NavMeshAgent agent;
 
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Transform>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius, playerLayer);
+
+        if (colliders.Length > 0 )
+        {
+            agent.speed = 0f;
+        }
+        else
+        {
+            agent.speed = 3.5f;
+        }
+
         ShootProjectile();
     }
 
@@ -36,4 +50,10 @@ public class EnemyShoot : MonoBehaviour
             shootNow = 0f;
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y+1.5f, transform.position.z), detectionRadius);
+    }
+
 }
