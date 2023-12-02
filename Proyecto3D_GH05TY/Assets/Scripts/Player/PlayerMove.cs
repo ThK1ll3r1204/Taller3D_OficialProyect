@@ -19,12 +19,9 @@ public class PlayerMove : MonoBehaviour
     public bool isCollidingWithSlippery = false;
     public bool isCollidingWithSlow = false;
     [SerializeField] private float stoppingSpeed = 2.0f;
-<<<<<<< Updated upstream
     private float slipperyTimer = 2f;
     private float slipperySpeed = 4f;
-=======
     float velocidadInicial;
->>>>>>> Stashed changes
 
 
     void Start()
