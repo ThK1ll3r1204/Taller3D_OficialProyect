@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ParticleSpawn : MonoBehaviour
 {
-    /*public GameObject PEffect;
+    public GameObject PEffect;
     public GameObject Object;
     
     void Update()
@@ -13,5 +13,5 @@ public class ParticleSpawn : MonoBehaviour
         {
             Instantiate(PEffect, transform.position, Quaternion.identity);
         }
-    }*/
+    }
 }
