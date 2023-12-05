@@ -7,37 +7,43 @@ public class GameManager : MonoBehaviour
 {
     GrillaController grillaController;
     public static GameManager gameManager;
-    Spawner spawner;
     RoundCounterManager roundCounterScript;
     public int currentEnemies;
     public int currentPowerUps;
     public int enemiesOnTheScene;
+    public int enemiesMaxOnScene;
+    public int enemiesPerSpawn;
+    public int enemiesCanSpawn;
+    public bool CanSpawn;
 
     void Start()
     {
+        enemiesPerSpawn = enemiesCanSpawn;
         grillaController = FindAnyObjectByType<GrillaController>();
-        spawner = FindAnyObjectByType<Spawner>();
         roundCounterScript = FindAnyObjectByType<RoundCounterManager>();
     }
 
     private void Update()
     {
-        
-        if (spawner.SpawnedObjectsCounter >= spawner.maxSpawnedObjects && currentEnemies <= 0 && grillaController.gridFinish==true)
+        enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        if (enemiesOnTheScene >= enemiesMaxOnScene)
         {
-            SecondCheckForEnemies();
+            CanSpawn = false;
+        }
+        else
+        {
+            CanSpawn = true;
+        }
+
+        if (enemiesCanSpawn >= enemiesPerSpawn && enemiesOnTheScene <= 0 )
+        {
+            roundCounterScript.RoundSucceeded();
+
         }        
     }
     
-    public void SecondCheckForEnemies()
-    {
-        enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;
-
-        if (enemiesOnTheScene <= 0)
-        {
-            roundCounterScript.RoundSucceeded();
-        }
-    }
+   
     
 }
 

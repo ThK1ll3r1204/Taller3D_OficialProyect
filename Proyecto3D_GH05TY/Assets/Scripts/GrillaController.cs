@@ -118,7 +118,6 @@ public class GrillaController : MonoBehaviour
 
 
 
-
         int[,] matrix8 =
            {{1,5,1,1,1,0,0,0,0,0},
             {1,0,0,4,1,0,0,0,0,0},
