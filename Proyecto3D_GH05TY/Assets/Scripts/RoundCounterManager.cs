@@ -17,7 +17,13 @@ public class RoundCounterManager : MonoBehaviour
 
     public void RoundSucceeded()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (round % 3 == 0)
+        {
+            GameManager.gameManager.enemiesPerSpawn += 2;
+            GameManager.gameManager.enemiesMaxOnScene += 4;
+        }
+        
         round++;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

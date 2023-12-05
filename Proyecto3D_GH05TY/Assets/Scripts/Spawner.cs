@@ -24,12 +24,12 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (GameManager.gameManager.enemiesCanSpawn >=0 && SpawnedObjectsCounter <= maxSpawnedObjects)
+            if (GameManager.gameManager.enemiesCanSpawn >=0 && GameManager.gameManager.CanSpawn)
             {
                 int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
                 GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
                 Instantiate(randomPrefab, transform.position, Quaternion.identity);
-                SpawnedObjectsCounter++;
+                GameManager.gameManager.enemiesCanSpawn--;
 
             }
             
