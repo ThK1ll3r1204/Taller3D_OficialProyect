@@ -15,13 +15,12 @@ public class PowerUpSpawner : Spawner
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (SpawnedObjectsCounter < maxSpawnedObjects)
-            {
-                int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
-                GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
-                Instantiate(randomPrefab, transform.position, Quaternion.identity);
-                this.SpawnedObjectsCounter++;
-            }
+            //if (SpawnedObjectsCounter < maxSpawnedObjects)
+            //{
+            //    int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
+            //    GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
+            //    Instantiate(randomPrefab, transform.position, Quaternion.identity);
+            //}
         }
 
     }

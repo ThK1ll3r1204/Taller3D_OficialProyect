@@ -422,10 +422,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesOnTheScene: 0
-  enemiesMaxOnScene: 0
-  enemiesPerSpawn: 0
+  enemiesMaxOnScene: 10
+  enemiesPerSpawn: 10
   enemiesCanSpawn: 0
-  CanSpawn: 0
+  CanSpawn: 1
   currentPowerUps: 0
 --- !u!4 &849790194
 Transform:

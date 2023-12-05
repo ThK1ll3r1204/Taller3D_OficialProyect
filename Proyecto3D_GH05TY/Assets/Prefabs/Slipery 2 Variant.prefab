@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3475434314815814559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 51.52264
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.1000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 74.84968
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651505937791915521, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424945970312203451, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_Name
+      value: Slipery 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785036096232156526, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f86f2f4a93e59794cb9d067afd1378cd, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6924884064994770205, guid: 53397bb6b0f50fa428c49e9aadf246c4, type: 3}
+    - {fileID: 3398741331814746405, guid: 53397bb6b0f50fa428c49e9aadf246c4, type: 3}
+    - {fileID: 5176276882870107200, guid: 53397bb6b0f50fa428c49e9aadf246c4, type: 3}
+    - {fileID: 3005864620942969644, guid: 53397bb6b0f50fa428c49e9aadf246c4, type: 3}
+    - {fileID: 5039637829128206609, guid: 53397bb6b0f50fa428c49e9aadf246c4, type: 3}
+    - {fileID: 7824015822285687470, guid: 53397bb6b0f50fa428c49e9aadf246c4, type: 3}
+    - {fileID: 4960250422567072960, guid: 53397bb6b0f50fa428c49e9aadf246c4, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53397bb6b0f50fa428c49e9aadf246c4, type: 3}

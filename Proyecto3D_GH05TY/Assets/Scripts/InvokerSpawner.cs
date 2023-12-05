@@ -13,10 +13,10 @@ public class InvokerSpawner : Spawner
 
     void Update()
     {
-        if (this.SpawnedObjectsCounter <= this.maxSpawnedObjects)
-        {
-            enemy3Script.enableLastBehaviour = true;
-        }
+        //if (this.SpawnedObjectsCounter <= this.maxSpawnedObjects)
+        //{
+        //    enemy3Script.enableLastBehaviour = true;
+        //}
     }
 
     protected override IEnumerator SpawnObjects()
