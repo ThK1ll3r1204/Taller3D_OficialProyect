@@ -12,11 +12,9 @@ public class Spawner : MonoBehaviour
     public int maxObjectsOnScreen;
     public int SpawnedObjectsCounter;
     public int maxSpawnedObjects;
-    protected GameManager gameManager;
 
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         StartCoroutine(SpawnObjects());
     }
     
@@ -26,13 +24,13 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (gameManager.currentEnemies < maxObjectsOnScreen || SpawnedObjectsCounter <= maxSpawnedObjects)
+            if (GameManager.gameManager.enemiesCanSpawn >=0 && SpawnedObjectsCounter <= maxSpawnedObjects)
             {
                 int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
                 GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
                 Instantiate(randomPrefab, transform.position, Quaternion.identity);
                 SpawnedObjectsCounter++;
-                gameManager.currentEnemies++;
+
             }
             
         }

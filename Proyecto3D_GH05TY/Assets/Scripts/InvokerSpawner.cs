@@ -8,7 +8,6 @@ public class InvokerSpawner : Spawner
     void Start()
     {
         StartCoroutine(SpawnObjects());
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         enemy3Script = GetComponentInParent<Enemy3Move>();
     }
 

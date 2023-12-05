@@ -7,7 +7,6 @@ public class PowerUpSpawner : Spawner
     void Start()
     {
         StartCoroutine(SpawnObjects());
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     protected override IEnumerator SpawnObjects()
@@ -16,13 +15,12 @@ public class PowerUpSpawner : Spawner
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (gameManager.currentPowerUps < maxObjectsOnScreen || SpawnedObjectsCounter < maxSpawnedObjects)
+            if (SpawnedObjectsCounter < maxSpawnedObjects)
             {
                 int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
                 GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
                 Instantiate(randomPrefab, transform.position, Quaternion.identity);
                 this.SpawnedObjectsCounter++;
-                gameManager.currentPowerUps++;
             }
         }
 

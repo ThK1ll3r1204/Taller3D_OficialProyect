@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
         if (enemiesCanSpawn >= enemiesPerSpawn && enemiesOnTheScene <= 0 )
         {
-            roundCounterScript.RoundSucceeded();
+            //roundCounterScript.RoundSucceeded();
 
         }        
     }
