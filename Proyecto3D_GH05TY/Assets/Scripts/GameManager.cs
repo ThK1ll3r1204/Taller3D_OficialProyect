@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    GrillaController grillaController;
     public static GameManager gameManager;
     RoundCounterManager roundCounterScript;
     [Header ("Enemigos")]
@@ -22,7 +21,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         enemiesCanSpawn = enemiesPerSpawn;
-        grillaController = FindAnyObjectByType<GrillaController>();
         roundCounterScript = FindAnyObjectByType<RoundCounterManager>();
     }
 
@@ -34,6 +32,7 @@ public class GameManager : MonoBehaviour
         {
             CanSpawn = false;
         }
+
         else
         {
             CanSpawn = true;
