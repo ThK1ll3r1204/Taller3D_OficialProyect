@@ -40,7 +40,6 @@ public class EnemyLife : MonoBehaviour
 
         if(currentLife<=0)
         {
-            gameManager.currentEnemies--;
             scoreScript.scoreMultiplierTimer++;
             scoreScript.AddScore(pointsGiven);
             Destroy(this.gameObject);

@@ -5,15 +5,20 @@ using UnityEngine.AI;
 
 public class GrillaController : MonoBehaviour
 {
+    [SerializeField] GameObject terrainblock;
     [SerializeField] GameObject[] cubePrefab;
     [SerializeField] GameObject[] HazardBlockPrefab;
+    [SerializeField] GameObject heartblock;
     [SerializeField] GameObject EnemyBlockPrefab;
     [SerializeField] GameObject PowerBlockPrefab;
+    
+    
     public int gridSize = 10;
     public float delay = 0.5f;
     public bool gridFinish = false;
     [SerializeField]
     int[][,] arrayGridMatrix;
+
 
     
 
@@ -247,14 +252,22 @@ public class GrillaController : MonoBehaviour
                 int blockType = gridMatrix[y, x];
                 Vector3 spawnPosition = new Vector3(x, 0, y) * 10;
 
-                if (blockType == 1)
+                if (blockType == 1) 
                 {
-                    Instantiate(cubePrefab[Random.Range(0,cubePrefab.Length)], spawnPosition, Quaternion.identity);
+                    Instantiate(terrainblock, spawnPosition, Quaternion.identity);
                 }
                 else if (blockType == 2)
                 {
                     Instantiate(HazardBlockPrefab[Random.Range(0, HazardBlockPrefab.Length)], spawnPosition, Quaternion.identity);
-                }                
+                }
+                else if (blockType == 3)
+                {
+                    Instantiate(cubePrefab[Random.Range(0, cubePrefab.Length)], spawnPosition, Quaternion.identity);
+                }
+                else if (blockType == 4)
+                {
+                    Instantiate(heartblock, spawnPosition, Quaternion.identity);
+                }
                 else if (blockType == 5)
                 {
                     Instantiate(EnemyBlockPrefab, spawnPosition, Quaternion.identity);
