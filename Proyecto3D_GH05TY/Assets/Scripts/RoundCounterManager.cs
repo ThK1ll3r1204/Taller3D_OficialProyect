@@ -3,15 +3,27 @@ using UnityEngine.SceneManagement;
 
 public class RoundCounterManager : MonoBehaviour
 {
+    public static RoundCounterManager Instance;
     public int round;
-
+    GameManager gameManager;
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+
+        if (RoundCounterManager.Instance == null && SceneManager.GetActiveScene().name == "Cesar")
+        {
+            RoundCounterManager.Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);    
+        }
+
     }
 
     void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
         round = 1;
     }
 
@@ -19,8 +31,9 @@ public class RoundCounterManager : MonoBehaviour
     {
         if (round % 3 == 0)
         {
-            GameManager.gameManager.enemiesPerSpawn += 2;
-            GameManager.gameManager.enemiesMaxOnScene += 4;
+
+            gameManager.enemiesPerSpawn += 2;
+            gameManager.enemiesMaxOnScene += 4;
         }
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

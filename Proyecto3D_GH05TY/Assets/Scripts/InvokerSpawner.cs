@@ -7,9 +7,9 @@ public class InvokerSpawner : Spawner
     Enemy3Move enemy3Script;
     public int enemiesInInvok;
     
-
     void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
         StartCoroutine(SpawnObjects());
         enemy3Script = GetComponentInParent<Enemy3Move>();
     }

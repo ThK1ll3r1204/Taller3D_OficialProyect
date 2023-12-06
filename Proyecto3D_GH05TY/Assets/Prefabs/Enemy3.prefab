@@ -258,9 +258,9 @@ MonoBehaviour:
   enableLastBehaviour: 0
   enemyBulletPrefab: {fileID: 5257577806617775449, guid: a245e6f506f8bfa48a75cad237959c1a,
     type: 3}
-  shootRate: 0
+  shootRate: 2
   shootNow: 0
-  enemyBulletSpeed: 0
+  enemyBulletSpeed: 5
 --- !u!114 &7162550016694393636
 MonoBehaviour:
   m_ObjectHideFlags: 0
