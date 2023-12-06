@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField]
-    protected GameObject[] gameObjectsPrefabs;
-    [SerializeField]
-    protected float spawnRate;
-    [SerializeField]
+    [SerializeField]  GameObject[] gameObjectsPrefabs;
+    [SerializeField]  protected float spawnRate;
+    public GameManager gameManager;
     
 
     private void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
         StartCoroutine(SpawnObjects());
     }
     
@@ -22,12 +21,12 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (GameManager.gameManager.enemiesCanSpawn >=0 && GameManager.gameManager.CanSpawn == true)
+            if (gameManager.enemiesCanSpawn >=0 && gameManager.CanSpawn == true)
             {
                 int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
                 GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
                 Instantiate(randomPrefab, transform.position, Quaternion.identity);
-                GameManager.gameManager.enemiesCanSpawn--;
+                gameManager.enemiesCanSpawn--;
 
             }
             

@@ -38,9 +38,10 @@ public class GameManager : MonoBehaviour
             CanSpawn = true;
         }
 
-        if (enemiesCanSpawn >= enemiesPerSpawn && enemiesOnTheScene <= 0)
+        if (enemiesCanSpawn <= 0 && enemiesOnTheScene <= 0)
         {
-            //roundCounterScript.RoundSucceeded();
+            roundCounterScript.round++;
+            roundCounterScript.RoundSucceeded();
 
         }        
     }

@@ -23,7 +23,6 @@ public class RoundCounterManager : MonoBehaviour
             GameManager.gameManager.enemiesMaxOnScene += 4;
         }
         
-        round++;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
