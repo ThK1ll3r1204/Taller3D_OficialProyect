@@ -228,7 +228,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.9490199, b: 1, a: 1}
+      maxColor: {r: 0, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4782,7 +4782,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5cf7eab20a25eb340b39c4e3fa75498c, type: 2}
+  - {fileID: 2100000, guid: 6d7a2c687e6629f4ab6fc326a3a3acf8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4875,8 +4875,8 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.04
-  m_PreviewTimeScale: 0.1
+  m_Time: 0.4
+  m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -4885,7 +4885,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.5
+        value: 0.5342368
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -4893,14 +4893,14 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.2762022
-        value: 0.29136148
-        inSlope: -1.4845862
-        outSlope: -1.4845862
+        time: 0.25818324
+        value: 0.38726157
+        inSlope: -1.0732603
+        outSlope: -1.0732603
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.9548913
-        outWeight: 0.1858421
+        inWeight: 0.68320143
+        outWeight: 0.120959565
       - serializedVersion: 3
         time: 1
         value: 0
@@ -4915,7 +4915,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0.8632941, b: 1, a: 1}
+      key0: {r: 0, g: 1, b: 0.9005003, a: 1}
       key1: {r: 0, g: 0.8632941, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5078,6 +5078,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
         type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
+        type: 3}
       propertyPath: lengthInSec
       value: 30
       objectReference: {fileID: 0}
@@ -5138,6 +5143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
         type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
+        type: 3}
       propertyPath: TrailModule.sizeAffectsLifetime
       value: 1
       objectReference: {fileID: 0}
@@ -5160,6 +5170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
         type: 3}

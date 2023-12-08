@@ -5173,12 +5173,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
         type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
+        type: 3}
       propertyPath: lengthInSec
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
         type: 3}
       propertyPath: TrailModule.mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
+        type: 3}
+      propertyPath: startDelay.scalar
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
@@ -5233,6 +5243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
         type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
+        type: 3}
       propertyPath: TrailModule.sizeAffectsLifetime
       value: 1
       objectReference: {fileID: 0}
@@ -5255,6 +5270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5111197212938358771, guid: d292b6bd4b3638044a635163e5e5b6c6,
         type: 3}
