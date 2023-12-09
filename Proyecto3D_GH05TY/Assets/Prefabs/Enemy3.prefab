@@ -256,7 +256,7 @@ MonoBehaviour:
   maxDistance: 10
   changeDirectionTimer: 0
   enableLastBehaviour: 0
-  enemyBulletPrefab: {fileID: 5257577806617775449, guid: a245e6f506f8bfa48a75cad237959c1a,
+  enemyBulletPrefab: {fileID: 3498527108786645643, guid: 5ad039900121f8446830ff7f2eac901a,
     type: 3}
   shootRate: 2
   shootNow: 0
