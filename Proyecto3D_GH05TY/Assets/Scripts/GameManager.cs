@@ -6,44 +6,43 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
-    RoundCounterManager roundCounterScript;
     [Header ("Enemigos")]
     public int enemiesOnTheScene;
     public int enemiesMaxOnScene;
-    public int enemiesPerSpawn;
     public int enemiesCanSpawn;
     public bool CanSpawn = true;
-
+    
     [Header ("PowerUps")]
     public int currentPowerUps;
 
-
-    void Start()
+    private void Awake()
     {
-        enemiesCanSpawn = enemiesPerSpawn;
-        roundCounterScript = FindAnyObjectByType<RoundCounterManager>();
+        if (GameManager.gameManager == null && SceneManager.GetActiveScene().name == "Cesar")
+        {
+            GameManager.gameManager = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-
+    
     private void Update()
     {
-        enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-        if (enemiesOnTheScene >= enemiesMaxOnScene)
+        enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        
+        if(enemiesOnTheScene >= enemiesMaxOnScene)
         {
             CanSpawn = false;
         }
-
         else
         {
-            CanSpawn = true;
+            CanSpawn=true;
         }
 
-        if (enemiesCanSpawn <= 0 && enemiesOnTheScene <= 0)
-        {
-            roundCounterScript.round++;
-            roundCounterScript.RoundSucceeded();
 
-        }        
     }
     
    

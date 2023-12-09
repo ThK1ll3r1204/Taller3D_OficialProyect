@@ -21,18 +21,13 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnRate);
 
-            if (gameManager.enemiesCanSpawn >=0 && gameManager.CanSpawn == true)
+            if (gameManager.enemiesCanSpawn > 0 && gameManager.CanSpawn)
             {
                 int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
                 GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
                 Instantiate(randomPrefab, transform.position, Quaternion.identity);
                 gameManager.enemiesCanSpawn--;
-
-            }
-            
+            }            
         }
-
-    }
-    
-
+    }    
 }
