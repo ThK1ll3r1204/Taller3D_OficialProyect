@@ -32,8 +32,9 @@ public class GameManager : MonoBehaviour
     {
 
         enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
         
-        if(enemiesOnTheScene >= enemiesMaxOnScene)
+        if (enemiesOnTheScene >= enemiesMaxOnScene)
         {
             CanSpawn = false;
         }

@@ -8,7 +8,7 @@ public class RoundCounterManager : MonoBehaviour
     public GameManager gameManager;
     private int initialAmmo;
     private int maxEnemies;
-
+    [SerializeField] bool roundComplete = false;
     private void Awake()
     {
         if (RoundCounterManager.Instance == null && SceneManager.GetActiveScene().name == "Cesar")
@@ -20,13 +20,14 @@ public class RoundCounterManager : MonoBehaviour
         {
             Destroy(gameObject);    
         }
-
+        
     }
 
 
 
     void Start()
     {
+        roundComplete = false;
         round = 1;
         gameManager = FindAnyObjectByType<GameManager>();
         initialAmmo = gameManager.enemiesCanSpawn;
@@ -35,10 +36,10 @@ public class RoundCounterManager : MonoBehaviour
 
     private void Update()
     {
-        if (gameManager.enemiesCanSpawn <= 0 && gameManager.enemiesOnTheScene <= 0)
+        if (!roundComplete && gameManager.enemiesCanSpawn <= 0 && gameManager.enemiesOnTheScene <= 0)
         {
-            
-            RoundSucceeded();
+           RoundSucceeded();
+            roundComplete = true;
         }
         
     }
@@ -48,13 +49,14 @@ public class RoundCounterManager : MonoBehaviour
     public void RoundSucceeded()
     {
         round++;
+
         if (round % 3 == 0)
         {
             Debug.Log("DEBE SUMAR EN GAMEMANAGER");
             gameManager.enemiesCanSpawn = initialAmmo + 2;
             gameManager.enemiesMaxOnScene = maxEnemies + 4;
         }
-
+        roundComplete= true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
