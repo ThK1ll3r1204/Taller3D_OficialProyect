@@ -457,7 +457,7 @@ MonoBehaviour:
   enemiesCanSpawn: 10
   CanSpawnEnemies: 1
   powerUpsOnTheScene: 0
-  powerUpsMaxOnTheScene: 2
+  powerUpsMaxOnTheScene: 4
   CanSpawnPowerUps: 0
 --- !u!4 &849790194
 Transform:

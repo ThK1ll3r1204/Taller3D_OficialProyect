@@ -48,9 +48,5 @@ MonoBehaviour:
   - {fileID: 4276182337802429721, guid: e44a821e6e489e441b0a618ffe157a06, type: 3}
   - {fileID: 8211313123354603364, guid: 7187efd8dc6f54042989d227c18cec35, type: 3}
   - {fileID: 8211313123354603364, guid: 3f8c1907335121d44b761e9e133e6cf8, type: 3}
-  - {fileID: 8211313123354603364, guid: 45579304a492c014a9566e25fb39fcec, type: 3}
-  - {fileID: 8211313123354603364, guid: ba841ee1c7f491e4f857dd330a62dbff, type: 3}
   spawnRate: 10
-  maxObjectsOnScreen: 2
-  totalSpawnedObjects: 0
-  maxSpawnedObjects: 8
+  gameManager: {fileID: 0}

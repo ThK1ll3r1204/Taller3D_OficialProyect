@@ -12,8 +12,7 @@ public class PowerUpSpawner : Spawner
 
     protected override IEnumerator SpawnObjects()
     {
-        Debug.Log(new WaitForSeconds(spawnRate));
-        while (gameManager.powerUpsMaxOnTheScene < gameManager.powerUpsOnTheScene && gameManager.CanSpawnPowerUps)
+        while (gameManager.CanSpawnPowerUps==true)
         {
             yield return new WaitForSeconds(spawnRate);
             int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);

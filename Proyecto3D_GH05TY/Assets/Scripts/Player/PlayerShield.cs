@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,16 +12,20 @@ public class PlayerShield : MonoBehaviour
     PlayerLife player;
     [SerializeField]
     private float knockbackForce;
+    [SerializeField] bool haveShield = false;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLife>();
         shieldTimer = 0f;
     }
-    private void Update()
+    void Update()
     {
-        ShieldActive();
-
+        if (haveShield)
+        {
+            ShieldActive();
+        }
+        
         transform.position = player.transform.position;
     }
 

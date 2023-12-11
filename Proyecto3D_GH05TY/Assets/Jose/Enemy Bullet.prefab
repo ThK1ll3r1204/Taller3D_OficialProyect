@@ -53,7 +53,7 @@ MonoBehaviour:
   bulletSpeed: 0
   bulletMaxRange: 30
   collisionTag: Player
-  Damage: 2
+  Damage: 1
 --- !u!54 &856203163911645708
 Rigidbody:
   m_ObjectHideFlags: 0

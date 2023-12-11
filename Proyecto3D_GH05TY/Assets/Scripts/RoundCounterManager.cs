@@ -12,6 +12,8 @@ public class RoundCounterManager : MonoBehaviour
     [SerializeField] bool roundComplete = false;
     private void Awake()
     {
+        scoreCounter = FindAnyObjectByType<ScoreCounter>();
+
         if (RoundCounterManager.Instance == null && SceneManager.GetActiveScene().name == "Cesar")
         {
             RoundCounterManager.Instance = this;

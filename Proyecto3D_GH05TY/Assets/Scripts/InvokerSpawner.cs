@@ -28,9 +28,17 @@ public class InvokerSpawner : Spawner
 
     protected override IEnumerator SpawnObjects()
     {
-        yield return base.SpawnObjects();
-        enemiesInInvok--;
+        if(enemiesInInvok > 0)
+        {
+            yield return new WaitForSeconds(spawnRate);
+
+            int randomIndex = Random.Range(0, gameObjectsPrefabs.Length);
+            GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
+            Instantiate(randomPrefab, transform.position, Quaternion.identity);
+            enemiesInInvok--;
+        }
     }
-
-
 }
+
+
+
