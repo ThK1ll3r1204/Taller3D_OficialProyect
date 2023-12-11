@@ -11,11 +11,10 @@ public class GrillaController : MonoBehaviour
     [SerializeField] GameObject heartblock;
     [SerializeField] GameObject EnemyBlockPrefab;
     [SerializeField] GameObject PowerBlockPrefab;
-    
+    [SerializeField] NavMeshSurface walkableArea;
     
     public int gridSize = 10;
     public float delay = 0.5f;
-    public bool gridFinish = false;
     [SerializeField]
     int[][,] arrayGridMatrix;
 
@@ -281,7 +280,10 @@ public class GrillaController : MonoBehaviour
 
             }
         }
-        gridFinish = true;
+         new WaitForSeconds(delay);
+
+        walkableArea.BuildNavMesh();
+
     }
 }
 

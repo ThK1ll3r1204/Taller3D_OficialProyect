@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
+
     [Header ("Enemigos")]
     public int enemiesOnTheScene;
     public int enemiesMaxOnScene;
     public int enemiesCanSpawn;
-    public bool CanSpawn = true;
+    public bool CanSpawnEnemies = true;
     
     [Header ("PowerUps")]
-    public int currentPowerUps;
+    public int powerUpsOnTheScene;
+    public int powerUpsMaxOnTheScene;
+    public bool CanSpawnPowerUps = true;
 
     private void Awake()
     {
@@ -27,27 +30,38 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    private void Update()
+
+    private void Start()
     {
 
+    }
+
+    private void Update()
+    {
         enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        powerUpsOnTheScene = GameObject.FindGameObjectsWithTag("PowerUp").Length;
 
         
         if (enemiesOnTheScene >= enemiesMaxOnScene)
         {
-            CanSpawn = false;
+            CanSpawnEnemies = false;
         }
         else
         {
-            CanSpawn=true;
+            CanSpawnEnemies = true;
+        }
+        
+        if (powerUpsOnTheScene >= powerUpsMaxOnTheScene)
+        {
+            CanSpawnPowerUps = false;
+        }
+        else
+        {
+            CanSpawnPowerUps = true;
         }
 
 
     }
-    
-   
-    
 }
 
 

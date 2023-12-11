@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,21 +8,26 @@ public class PlayerLifeUI : MonoBehaviour
 {
     public int health;
     public int Nhearts;
-
+    [SerializeField] PlayerLife playerLife;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+
+    private void Start()
+    {
+        playerLife = GetComponent<PlayerLife>();
+    }
     void Update()
     {
-        if(health >Nhearts)
+        if(playerLife.currentLife > playerLife.maxLife)
         {
-            health = Nhearts;
+            playerLife.currentLife = playerLife.maxLife;
         }
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i<health)
+            if(i < playerLife.currentLife)
             {
                 hearts[i].sprite = fullHeart;
             }
@@ -30,7 +36,7 @@ public class PlayerLifeUI : MonoBehaviour
                 hearts[i].sprite = emptyHeart;
             }
 
-            if(i<Nhearts)
+            if(i<playerLife.maxLife)
             {
                 hearts[i].enabled = true;
             }
@@ -40,20 +46,6 @@ public class PlayerLifeUI : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            health -= 1;
-        }
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("EnemyBullet"))
-        {
-            health -= 1;
-        }
-    }
+    
+    
 }
