@@ -12,7 +12,6 @@ public class PlayerShield : MonoBehaviour
     PlayerLife player;
     [SerializeField]
     private float knockbackForce;
-    [SerializeField] bool haveShield = false;
 
     private void Start()
     {
@@ -21,11 +20,8 @@ public class PlayerShield : MonoBehaviour
     }
     void Update()
     {
-        if (haveShield)
-        {
-            ShieldActive();
-        }
-        
+        ShieldActive();
+
         transform.position = player.transform.position;
     }
 
@@ -36,7 +32,6 @@ public class PlayerShield : MonoBehaviour
 
         if (shieldTimer > shieldTurnOff)
         {
-            haveShield = false;
             player.invulnerableState = false;
             Destroy(this.gameObject);
         }

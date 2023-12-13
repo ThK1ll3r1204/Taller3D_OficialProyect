@@ -8,7 +8,7 @@ public class PlayerLife : MonoBehaviour
 {
     public int maxLife;
     public int currentLife;
-    public bool invulnerableState;
+    [SerializeField] public bool invulnerableState;
     public Transform spawn;
     ScoreCounter scoreScript;
 

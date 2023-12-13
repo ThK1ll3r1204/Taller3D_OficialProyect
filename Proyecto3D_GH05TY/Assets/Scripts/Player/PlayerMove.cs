@@ -18,7 +18,6 @@ public class PlayerMove : MonoBehaviour
     private bool canDash = true;
     public bool isCollidingWithSlippery = false;
     public bool isCollidingWithSlow = false;
-    [SerializeField] private float stoppingSpeed = 2.0f;
     private float slipperyTimer = 2f;
     private float slipperySpeed = 4f;
     float velocidadInicial;

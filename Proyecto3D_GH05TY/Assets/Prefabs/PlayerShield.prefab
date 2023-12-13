@@ -119,5 +119,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldTimer: 0
-  shieldTurnOff: 100
+  shieldTurnOff: 30
   knockbackForce: 1
