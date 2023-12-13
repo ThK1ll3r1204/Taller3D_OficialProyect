@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject[] gameObjectsPrefabs;
     [SerializeField]  protected float spawnRate;
-    public GameManager gameManager;
+    private GameManager gameManager;
     
     void Start()
     {

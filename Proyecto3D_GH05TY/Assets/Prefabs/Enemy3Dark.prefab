@@ -48,7 +48,6 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: c44295b3b88d1be4e8d42f2d32356d97, type: 3}
   - {fileID: 268938346636702691, guid: 6924b4fbabe794f44b91313f45280175, type: 3}
   spawnRate: 5
-  gameManager: {fileID: 0}
   enemiesInInvok: 5
 --- !u!1 &2825829928431515059
 GameObject:
@@ -98,7 +97,6 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: c44295b3b88d1be4e8d42f2d32356d97, type: 3}
   - {fileID: 268938346636702691, guid: 6924b4fbabe794f44b91313f45280175, type: 3}
   spawnRate: 5
-  gameManager: {fileID: 0}
   enemiesInInvok: 5
 --- !u!1 &2869290604067840088
 GameObject:
@@ -259,8 +257,8 @@ MonoBehaviour:
   enemyBulletPrefab: {fileID: 3498527108786645643, guid: 5ad039900121f8446830ff7f2eac901a,
     type: 3}
   shootRate: 2
-  shootNow: 0
-  enemyBulletSpeed: 5
+  shootNow: 2.11
+  enemyBulletSpeed: 20
 --- !u!114 &7162550016694393636
 MonoBehaviour:
   m_ObjectHideFlags: 0

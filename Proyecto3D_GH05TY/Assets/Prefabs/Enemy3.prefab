@@ -48,7 +48,6 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: e20892007657dd34baa6e519e7e3f912, type: 3}
   - {fileID: 268938346636702691, guid: 3c8ca94051bc9174695f0a5b80a584ba, type: 3}
   spawnRate: 5
-  gameManager: {fileID: 0}
   enemiesInInvok: 5
 --- !u!1 &2825829928431515059
 GameObject:
@@ -98,7 +97,6 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: e20892007657dd34baa6e519e7e3f912, type: 3}
   - {fileID: 268938346636702691, guid: 3c8ca94051bc9174695f0a5b80a584ba, type: 3}
   spawnRate: 5
-  gameManager: {fileID: 0}
   enemiesInInvok: 5
 --- !u!1 &2869290604067840088
 GameObject:

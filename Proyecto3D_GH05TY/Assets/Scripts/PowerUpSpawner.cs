@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PowerUpSpawner : Spawner
 {
+    [SerializeField] GameManager gameManager;
     void Start()
     {
         gameManager= FindAnyObjectByType<GameManager>();

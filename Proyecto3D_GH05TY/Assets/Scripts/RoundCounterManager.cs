@@ -1,19 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RoundCounterManager : MonoBehaviour
 {
     public static RoundCounterManager Instance;
     public int round;
+    public Text roundText;
     public GameManager gameManager;
-    public ScoreCounter scoreCounter;
     private int initialAmmo;
     private int maxEnemies;
     [SerializeField] bool roundComplete = false;
     private void Awake()
     {
-        scoreCounter = FindAnyObjectByType<ScoreCounter>();
-
         if (RoundCounterManager.Instance == null && SceneManager.GetActiveScene().name == "Cesar")
         {
             RoundCounterManager.Instance = this;
@@ -33,17 +32,16 @@ public class RoundCounterManager : MonoBehaviour
         roundComplete = false;
         round = 1;
         gameManager = FindAnyObjectByType<GameManager>();
-        scoreCounter= FindAnyObjectByType<ScoreCounter>();
         initialAmmo = gameManager.enemiesCanSpawn;
         maxEnemies = gameManager.enemiesMaxOnScene;
-                
+        roundText= GameObject.Find("roundUI").GetComponent<Text>();
     }
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().name != "Cesar")
+        if (SceneManager.GetActiveScene().name == "MENUof")
         {
-            round = 0;
+            Instance.round = 0;
             ScoreCounter.Score = 0;
 
         }
@@ -57,6 +55,12 @@ public class RoundCounterManager : MonoBehaviour
         else if (gameManager.enemiesCanSpawn > 0)
         {
             roundComplete = false;  
+        }
+
+        if (roundText == null)
+        {
+            roundText = GameObject.Find("roundUI").GetComponent<Text>();
+            roundText.text = "Ronda: " + round;
         }
     }
 

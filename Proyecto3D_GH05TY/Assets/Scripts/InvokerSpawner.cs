@@ -9,7 +9,6 @@ public class InvokerSpawner : Spawner
     
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManager>();
         StartCoroutine(SpawnObjects());
         enemy3Script = GetComponentInParent<Enemy3Move>();
     }
@@ -19,14 +18,11 @@ public class InvokerSpawner : Spawner
         if (enemiesInInvok<=0)
         {
             enemy3Script.enableLastBehaviour = true;
-        }
-        if (enemiesInInvok <= 0)
-        {
-            StopCoroutine(SpawnObjects());
-        }
+            //StopCoroutine(SpawnObjects());
+        }        
     }
 
-    protected override IEnumerator SpawnObjects()
+    new IEnumerator SpawnObjects()
     {
         if(enemiesInInvok > 0)
         {

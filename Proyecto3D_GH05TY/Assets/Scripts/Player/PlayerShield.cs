@@ -36,6 +36,7 @@ public class PlayerShield : MonoBehaviour
 
         if (shieldTimer > shieldTurnOff)
         {
+            haveShield = false;
             player.invulnerableState = false;
             Destroy(this.gameObject);
         }
