@@ -30,12 +30,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void Start()
-    {
-
-    }
-
+    
     private void Update()
     {
         enemiesOnTheScene = GameObject.FindGameObjectsWithTag("Enemy").Length;

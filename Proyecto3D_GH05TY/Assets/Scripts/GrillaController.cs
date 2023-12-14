@@ -280,9 +280,8 @@ public class GrillaController : MonoBehaviour
 
             }
         }
-         new WaitForSeconds(delay);
-
-         walkableArea.BuildNavMesh();
+        new WaitForSeconds(delay);        
+        walkableArea.BuildNavMesh();
 
     }
 }

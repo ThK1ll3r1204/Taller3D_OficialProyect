@@ -329,6 +329,89 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[0]
+      value: 
+      objectReference: {fileID: 4317426469714884888, guid: d187e2f3c7bf04b1da6f4dc6154762d9,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[1]
+      value: 
+      objectReference: {fileID: 933230537108559379, guid: b92aebb76b8f441459b35f6f4bf3d078,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[2]
+      value: 
+      objectReference: {fileID: 2487630136832813259, guid: 365a7bd7e782a4dc0b5c2f3bfd8a9d6d,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[3]
+      value: 
+      objectReference: {fileID: 3132403630479425565, guid: 15f35205021504f778e2bb76d56e3b57,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[4]
+      value: 
+      objectReference: {fileID: 1565767368848391466, guid: 0f6899f9d661244ffa9f3cac3f393c49,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[5]
+      value: 
+      objectReference: {fileID: 6881481983004288973, guid: 26745f77e1b1949dc8ff30b84939b074,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[6]
+      value: 
+      objectReference: {fileID: 3406149268683357774, guid: 08af5b00f7614498cb0a2564e66deb18,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[7]
+      value: 
+      objectReference: {fileID: 1193058356894182040, guid: 76efba0d64e4249678c2bd03836731e7,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[8]
+      value: 
+      objectReference: {fileID: 5894917168968102497, guid: c6e1c6c2c538f4cfa8c2bb455927ddc3,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[9]
+      value: 
+      objectReference: {fileID: 6394218709087967581, guid: 43a2ee3af39354a7eaedaa79ed295548,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[10]
+      value: 
+      objectReference: {fileID: 3424945970312203451, guid: 53397bb6b0f50fa428c49e9aadf246c4,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[11]
+      value: 
+      objectReference: {fileID: 6074350980196302896, guid: a65dffc1e8b938a409d15740e5c4bddc,
+        type: 3}
+    - target: {fileID: 2463893370607705528, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: objectsToInclude.Array.data[12]
+      value: 
+      objectReference: {fileID: 878049445755642711, guid: 137e7319591e7ab49950a5c8a85d0698,
+        type: 3}
     - target: {fileID: 2971608195116093898, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -383,16 +466,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NavMeshForInvoker
-      objectReference: {fileID: 0}
-    - target: {fileID: 5893008293084439451, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
-        type: 3}
-      propertyPath: m_AgentTypeID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5893008293084439451, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
-        type: 3}
-      propertyPath: m_NavMeshData
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

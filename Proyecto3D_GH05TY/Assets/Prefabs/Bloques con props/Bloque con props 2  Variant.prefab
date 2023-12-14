@@ -66,5 +66,57 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7065649135827033483, guid: 7b411647a0fc7c541b5b3e30e734bdd7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2284209998337413451}
+    - targetCorrespondingSourceObject: {fileID: 4104520165443440202, guid: 7b411647a0fc7c541b5b3e30e734bdd7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7156354345392272192}
   m_SourcePrefab: {fileID: 100100000, guid: 7b411647a0fc7c541b5b3e30e734bdd7, type: 3}
+--- !u!1 &722282746933975747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4104520165443440202, guid: 7b411647a0fc7c541b5b3e30e734bdd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3670503020783441033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &7156354345392272192
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722282746933975747}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.5, y: 1.9, z: 0.53}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!1 &5836108184306026754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7065649135827033483, guid: 7b411647a0fc7c541b5b3e30e734bdd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3670503020783441033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &2284209998337413451
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5836108184306026754}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.22600001, y: 1.4330001, z: 0.22600001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
