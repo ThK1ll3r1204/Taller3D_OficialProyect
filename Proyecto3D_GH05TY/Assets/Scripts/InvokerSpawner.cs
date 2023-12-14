@@ -22,9 +22,9 @@ public class InvokerSpawner : Spawner
         }        
     }
 
-    new IEnumerator SpawnObjects()
+    protected override IEnumerator SpawnObjects()
     {
-        if(enemiesInInvok > 0)
+        while(enemiesInInvok > 0)
         {
             yield return new WaitForSeconds(spawnRate);
 

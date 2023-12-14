@@ -111,8 +111,7 @@ public class PlayerMove : MonoBehaviour
             playerLifeScript.invulnerableState = true;
 
             transform.position = Vector3.Lerp(startPosition, endPosition, (Time.time - startTime) / dashDuration);
-
-            
+                        
             yield return null;
         }
         rb.useGravity = true;

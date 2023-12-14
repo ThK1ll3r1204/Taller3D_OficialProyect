@@ -29,6 +29,7 @@ public class RoundCounterManager : MonoBehaviour
 
     void Start()
     {
+        SceneManager.sceneLoaded += OnSceneChange;
         roundComplete = false;
         round = 1;
         gameManager = FindAnyObjectByType<GameManager>();
@@ -41,7 +42,7 @@ public class RoundCounterManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MENUof")
         {
-            Instance.round = 0;
+            Instance.round = 1;
             ScoreCounter.Score = 0;
 
         }
@@ -57,9 +58,8 @@ public class RoundCounterManager : MonoBehaviour
             roundComplete = false;  
         }
 
-        if (roundText == null)
+        if (roundText != null)
         {
-            roundText = GameObject.Find("roundUI").GetComponent<Text>();
             roundText.text = "Ronda: " + round;
         }
     }
@@ -74,4 +74,10 @@ public class RoundCounterManager : MonoBehaviour
                 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    void OnSceneChange(Scene scene, LoadSceneMode mode)
+    {
+        roundText = GameObject.Find("roundUI").GetComponent<Text>();
+    }
+
 }

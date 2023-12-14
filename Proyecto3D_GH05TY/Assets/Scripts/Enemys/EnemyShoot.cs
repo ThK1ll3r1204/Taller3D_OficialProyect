@@ -14,6 +14,7 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField] float detectionRadius = 5f;
     [SerializeField] LayerMask playerLayer;
     [SerializeField] NavMeshAgent agent;
+    [SerializeField] float distance;
 
     void Start()
     {
@@ -23,15 +24,22 @@ public class EnemyShoot : MonoBehaviour
 
     void Update()
     {
+
+        
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius, playerLayer);
 
         if (colliders.Length > 0 )
         {
-            agent.speed = 0f;
+            agent.speed = 0.25f;
         }
         else
         {
             agent.speed = 3.5f;
+        }
+        if (Vector3.Distance(transform.position, player.position) >= distance)
+        {
+            return;
         }
 
         ShootProjectile();

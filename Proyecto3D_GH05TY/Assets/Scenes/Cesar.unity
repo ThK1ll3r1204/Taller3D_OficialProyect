@@ -664,6 +664,11 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 1512079604}
+    - target: {fileID: 5547094333185763394, guid: cb43abece9d06054aaf4e03b6124dd02,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7783093785567571864, guid: cb43abece9d06054aaf4e03b6124dd02,
         type: 3}
       propertyPath: m_Material
