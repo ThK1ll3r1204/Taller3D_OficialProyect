@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public GameObject[] mediumSpawner;
     public GameObject[] hardSpawner;
     [SerializeField]  protected float spawnRate;
-    private GameManager BaseGameManager;
+    protected GameManager BaseGameManager;
     
     void Start()
     {

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5015749988285957585
+--- !u!1001 &3728630120228443577
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -36,7 +36,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d2d3fde012b491e4b96cfee2376fcd28,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.441
+      value: 38.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2d3fde012b491e4b96cfee2376fcd28,
         type: 3}
@@ -101,7 +101,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2d3fde012b491e4b96cfee2376fcd28,
         type: 3}
       propertyPath: m_Name
-      value: Potion pink
+      value: Potion blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2d3fde012b491e4b96cfee2376fcd28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866621852552652557, guid: d2d3fde012b491e4b96cfee2376fcd28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2866621852552652557, guid: d2d3fde012b491e4b96cfee2376fcd28,
         type: 3}
@@ -112,7 +122,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d987fc7dafe21c349ad3fdf63d7f1585, type: 2}
+      objectReference: {fileID: 2100000, guid: 91bc2f84077dc09419647ee026510ee5, type: 2}
+    - target: {fileID: 6727007405964328823, guid: d2d3fde012b491e4b96cfee2376fcd28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

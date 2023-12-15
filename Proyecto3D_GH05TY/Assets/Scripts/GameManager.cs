@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         {
             CanSpawnEnemies = false;
         }
-        else
+        else if (enemiesOnTheScene < enemiesMaxOnScene)
         {
             CanSpawnEnemies = true;
         }

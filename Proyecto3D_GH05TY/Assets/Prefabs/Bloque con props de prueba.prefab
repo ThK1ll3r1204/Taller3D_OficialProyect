@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4340001897674252221}
   - component: {fileID: 2008112795177315191}
   - component: {fileID: 7370111974078365489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Ataud '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 2577484714760488024}
   - component: {fileID: 1471211585434504189}
   - component: {fileID: 3714973183780306743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vela 2 material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 8122767462700265783}
   - component: {fileID: 6295234795933353469}
   - component: {fileID: 9126951095162457714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Reja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 6127870514322107675}
   - component: {fileID: 8281669524748671441}
   - component: {fileID: 6626229435898668326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arbol L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
