@@ -19,7 +19,6 @@ public class InvokerSpawner : Spawner
         if (enemiesInInvok<=0)
         {
             enemy3Script.enableLastBehaviour = true;
-            StopCoroutine(SpawnObjects());
         }        
     }
 

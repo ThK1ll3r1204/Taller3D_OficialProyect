@@ -91,6 +91,7 @@ public class PlayerMove : MonoBehaviour
         {
             velocidad = velocidadInicial;
         }
+
     }
 
     void PlayerCanRotate()
