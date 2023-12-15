@@ -147,12 +147,12 @@ GameObject:
   - component: {fileID: 98140974}
   - component: {fileID: 98140975}
   m_Layer: 4
-  m_Name: NavMesh Surface
+  m_Name: NavMeshSkull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &98140974
 Transform:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 98140972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 5.77, z: 5}
+  m_LocalPosition: {x: 5, y: 6.6, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AgentTypeID: -334000983
+  m_AgentTypeID: 0
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.33333334
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: fbf16cd6d536dbe40ae1f0c9c638b17b, type: 2}
   m_BuildHeightMesh: 0
@@ -476,6 +476,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NavMeshForInvoker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730232392623437485, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893008293084439451, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: m_VoxelSize
+      value: 0.16666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893008293084439451, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: m_AgentTypeID
+      value: -334000983
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893008293084439451, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: m_GenerateLinks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893008293084439451, guid: 1fe2833191dd82a438b7bbbbe8ba2d71,
+        type: 3}
+      propertyPath: m_CollectObjects
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

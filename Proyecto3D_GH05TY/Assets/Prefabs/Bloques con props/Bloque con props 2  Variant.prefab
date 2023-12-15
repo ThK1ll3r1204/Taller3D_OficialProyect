@@ -63,6 +63,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloque con props 2  Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4821267555586031124, guid: 7b411647a0fc7c541b5b3e30e734bdd7,
+        type: 3}
+      propertyPath: m_CookingOptions
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972354771471436836, guid: 7b411647a0fc7c541b5b3e30e734bdd7,
+        type: 3}
+      propertyPath: m_CookingOptions
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

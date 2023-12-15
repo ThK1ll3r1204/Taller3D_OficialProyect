@@ -55,9 +55,12 @@ public class AudioManager : MonoBehaviour
             {
                 ReproducirAudio(audioInGame);
             }
-
+            
         }
-
+        else
+        {
+            ReproducirAudio(audioPrincipal);
+        }
     }
 
     private void ReproducirAudio(AudioClip audioClip)
