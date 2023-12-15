@@ -262,7 +262,7 @@ MonoBehaviour:
     type: 3}
   shootRate: 2
   shootNow: 0
-  enemyBulletSpeed: 2
+  enemyBulletSpeed: 20
 --- !u!114 &7162550016694393636
 MonoBehaviour:
   m_ObjectHideFlags: 0

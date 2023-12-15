@@ -125,7 +125,7 @@ public class PlayerMove : MonoBehaviour
         rb.useGravity = true;
         playerLifeScript.invulnerableState = false;
         transform.position = endPosition;
-        GetComponent<AudioSource>().PlayOneShot(sonidoDash);
+        //GetComponent<AudioSource>().PlayOneShot(sonidoDash);
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
