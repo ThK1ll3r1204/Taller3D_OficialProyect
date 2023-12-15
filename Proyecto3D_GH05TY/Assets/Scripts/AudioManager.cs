@@ -57,10 +57,6 @@ public class AudioManager : MonoBehaviour
             }
             
         }
-        else
-        {
-            ReproducirAudio(audioPrincipal);
-        }
     }
 
     private void ReproducirAudio(AudioClip audioClip)
