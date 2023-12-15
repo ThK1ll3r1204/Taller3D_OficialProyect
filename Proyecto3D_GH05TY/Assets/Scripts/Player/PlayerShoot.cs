@@ -29,8 +29,9 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetMouseButton(0) && canShoot > shootingRate)
         {
             Instantiate(LightBulletPrefab, shootingPoint.position, shootingPoint.rotation);
-            GetComponent<AudioSource>().PlayOneShot(disparodeluz);
             canShoot = 0;
+            GetComponent<AudioSource>().PlayOneShot(disparodeluz);
+
         }
         else if (Input.GetMouseButton(1) && canShoot > shootingRate)
         {

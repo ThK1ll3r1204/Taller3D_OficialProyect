@@ -101,7 +101,6 @@ public class PlayerMove : MonoBehaviour
     IEnumerator PerformDash(Vector3 dashDirection)
     {
         canDash = false;
-        GetComponent<AudioSource>().PlayOneShot(sonidoDash);
         Vector3 startPosition = transform.position;
         Vector3 endPosition = transform.position + dashDirection.normalized * dashDistance;
 
@@ -119,6 +118,7 @@ public class PlayerMove : MonoBehaviour
         rb.useGravity = true;
         playerLifeScript.invulnerableState = false;
         transform.position = endPosition;
+        GetComponent<AudioSource>().PlayOneShot(sonidoDash);
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;

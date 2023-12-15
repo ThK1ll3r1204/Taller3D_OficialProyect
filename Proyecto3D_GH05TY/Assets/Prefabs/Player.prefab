@@ -169,6 +169,7 @@ MonoBehaviour:
   dashDistance: 10
   dashDuration: 0.5
   dashCooldown: 2
+  sonidoDash: {fileID: 0}
   isCollidingWithSlippery: 0
   isCollidingWithSlow: 0
 --- !u!54 &5547094333185763394
@@ -215,6 +216,8 @@ MonoBehaviour:
     type: 3}
   DarkBulletPrefab: {fileID: 2758055173028350702, guid: 07f1fc6207963b04e92c9062136681e2,
     type: 3}
+  disparodeluz: {fileID: 0}
+  disparooscuro: {fileID: 0}
   shootingRate: 0.3
 --- !u!114 &2250941149625012613
 MonoBehaviour:
@@ -249,6 +252,8 @@ MonoBehaviour:
     type: 3}
   DarkBulletPrefab: {fileID: 2758055173028350702, guid: 07f1fc6207963b04e92c9062136681e2,
     type: 3}
+  disparodeluz: {fileID: 0}
+  disparooscuro: {fileID: 0}
   shootingRate: 0.3
 --- !u!114 &2079795706756702488
 MonoBehaviour:
