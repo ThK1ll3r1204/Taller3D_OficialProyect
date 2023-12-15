@@ -12,14 +12,19 @@ public class PlayerShoot : MonoBehaviour
     public float shootingRate;
     protected float canShoot = 0;
 
+    [SerializeField] PauseScreen pauseScript;
+
     void Start()
     {
-        
+        pauseScript = GameObject.Find("PauseScript").GetComponent<PauseScreen>();
     }
 
     void Update()
     {
-        PlayerShooting();
+        if (pauseScript.isGamePaused == false)
+        {
+            PlayerShooting();
+        }
     }
 
     protected virtual void PlayerShooting()

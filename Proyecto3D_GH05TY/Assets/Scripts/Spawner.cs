@@ -8,11 +8,11 @@ public class Spawner : MonoBehaviour
     public GameObject[] mediumSpawner;
     public GameObject[] hardSpawner;
     [SerializeField]  protected float spawnRate;
-    private GameManager gameManager;
+    private GameManager BaseGameManager;
     
     void Start()
     {
-        gameManager = GameManager.gameManager;
+        BaseGameManager = GameManager.gameManager;
         StartCoroutine(SpawnObjects());
     }
     
@@ -33,14 +33,14 @@ public class Spawner : MonoBehaviour
             spawnerPrefabs = hardSpawner;
         }
 
-        while (gameManager.enemiesCanSpawn > 0 && gameManager.CanSpawnEnemies)
+        while (BaseGameManager.enemiesCanSpawn > 0 && BaseGameManager.CanSpawnEnemies)
         {
             yield return new WaitForSeconds(spawnRate);
             
             int randomIndex = Random.Range(0, spawnerPrefabs.Length);
             GameObject randomPrefab = spawnerPrefabs[randomIndex];
             Instantiate(randomPrefab, transform.position, Quaternion.identity);
-            gameManager.enemiesCanSpawn--;                       
+            BaseGameManager.enemiesCanSpawn--;                       
         }
     }    
 }

@@ -11,6 +11,9 @@ public class RoundCounterManager : MonoBehaviour
     private int initialAmmo;
     private int maxEnemies;
     [SerializeField] bool roundComplete = false;
+
+    //public Text pauseReturn;
+    //public Text pauseExit;
     private void Awake()
     {
         if (RoundCounterManager.Instance == null && SceneManager.GetActiveScene().name == "Cesar")
@@ -36,6 +39,8 @@ public class RoundCounterManager : MonoBehaviour
         initialAmmo = gameManager.enemiesCanSpawn;
         maxEnemies = gameManager.enemiesMaxOnScene;
         roundText= GameObject.Find("roundUI").GetComponent<Text>();
+        //pauseReturn = GameObject.Find("ReturnButton").GetComponent<Text>();
+        //pauseExit = GameObject.Find("Exit").GetComponent<Text>();
     }
 
     private void Update()
@@ -78,6 +83,9 @@ public class RoundCounterManager : MonoBehaviour
     void OnSceneChange(Scene scene, LoadSceneMode mode)
     {
         roundText = GameObject.Find("roundUI").GetComponent<Text>();
+        //pauseReturn = GameObject.Find("ReturnButton").GetComponent<Text>();
+        //pauseExit = GameObject.Find("Exit").GetComponent<Text>();
+
     }
 
 }

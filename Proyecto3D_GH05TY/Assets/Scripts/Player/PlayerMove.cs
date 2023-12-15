@@ -24,24 +24,30 @@ public class PlayerMove : MonoBehaviour
     private float slipperySpeed = 4f;
     float velocidadInicial;
 
+    [SerializeField] PauseScreen pauseScript;
+
 
     void Start()
     {
         velocidadInicial = velocidad;
         rb= GetComponent<Rigidbody>();
         playerLifeScript = GetComponent<PlayerLife>();
+        pauseScript = GameObject.Find("PauseScript").GetComponent<PauseScreen>();
     }
 
     void Update()
     {
-        
-        Movement();
-        PlayerCanRotate();
-
-        if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
+        if (pauseScript.isGamePaused == false)
         {
-            StartCoroutine(PerformDash(lastMoveDirection));
+            Movement();
+            PlayerCanRotate();
+
+            if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                StartCoroutine(PerformDash(lastMoveDirection));
+            }
         }
+        
     }
 
     void Movement()

@@ -49,8 +49,8 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: 3c8ca94051bc9174695f0a5b80a584ba, type: 3}
   mediumSpawner: []
   hardSpawner: []
-  spawnRate: 5
-  enemiesInInvok: 5
+  spawnRate: 3
+  enemiesInInvok: 3
 --- !u!1 &2825829928431515059
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,8 +100,8 @@ MonoBehaviour:
   - {fileID: 268938346636702691, guid: 3c8ca94051bc9174695f0a5b80a584ba, type: 3}
   mediumSpawner: []
   hardSpawner: []
-  spawnRate: 5
-  enemiesInInvok: 5
+  spawnRate: 3
+  enemiesInInvok: 3
 --- !u!1 &2869290604067840088
 GameObject:
   m_ObjectHideFlags: 0

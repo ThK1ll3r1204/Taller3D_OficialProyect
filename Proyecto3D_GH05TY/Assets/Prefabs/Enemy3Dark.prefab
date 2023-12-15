@@ -50,7 +50,7 @@ MonoBehaviour:
   mediumSpawner: []
   hardSpawner: []
   spawnRate: 5
-  enemiesInInvok: 5
+  enemiesInInvok: 3
 --- !u!1 &2825829928431515059
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   mediumSpawner: []
   hardSpawner: []
   spawnRate: 5
-  enemiesInInvok: 5
+  enemiesInInvok: 3
 --- !u!1 &2869290604067840088
 GameObject:
   m_ObjectHideFlags: 0
