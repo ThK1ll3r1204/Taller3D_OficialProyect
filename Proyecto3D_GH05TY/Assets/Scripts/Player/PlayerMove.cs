@@ -15,6 +15,8 @@ public class PlayerMove : MonoBehaviour
     public float dashDuration = 0.5f; 
     [SerializeField]
     float dashCooldown = 2.0f; 
+    [SerializeField]
+    AudioClip sonidoDash;
     private bool canDash = true;
     public bool isCollidingWithSlippery = false;
     public bool isCollidingWithSlow = false;
@@ -99,7 +101,7 @@ public class PlayerMove : MonoBehaviour
     IEnumerator PerformDash(Vector3 dashDirection)
     {
         canDash = false;
-
+        GetComponent<AudioSource>().PlayOneShot(sonidoDash);
         Vector3 startPosition = transform.position;
         Vector3 endPosition = transform.position + dashDirection.normalized * dashDistance;
 
@@ -120,7 +122,6 @@ public class PlayerMove : MonoBehaviour
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
-
         rb.velocity = Vector3.zero;
     }
 

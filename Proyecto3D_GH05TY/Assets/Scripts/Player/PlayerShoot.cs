@@ -7,6 +7,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] protected Transform shootingPoint;
     [SerializeField] protected GameObject LightBulletPrefab;
     [SerializeField] protected GameObject DarkBulletPrefab;
+    [SerializeField] AudioClip disparodeluz;
+    [SerializeField] AudioClip disparooscuro;
     public float shootingRate;
     protected float canShoot = 0;
 
@@ -27,12 +29,14 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetMouseButton(0) && canShoot > shootingRate)
         {
             Instantiate(LightBulletPrefab, shootingPoint.position, shootingPoint.rotation);
+            GetComponent<AudioSource>().PlayOneShot(disparodeluz);
             canShoot = 0;
         }
         else if (Input.GetMouseButton(1) && canShoot > shootingRate)
         {
             Instantiate(DarkBulletPrefab, shootingPoint.position, shootingPoint.rotation);
             canShoot = 0;
+            GetComponent<AudioSource>().PlayOneShot(disparooscuro);
         }
     }
 }
