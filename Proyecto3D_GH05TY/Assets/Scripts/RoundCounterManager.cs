@@ -75,6 +75,9 @@ public class RoundCounterManager : MonoBehaviour
 
     void OnSceneChange(Scene scene, LoadSceneMode mode)
     {
-        roundText = GameObject.Find("roundUI").GetComponent<Text>();
+        if(GameObject.Find("roundUI")!= null)
+        {
+            roundText = GameObject.Find("roundUI").GetComponent<Text>();
+        }
     }
 }

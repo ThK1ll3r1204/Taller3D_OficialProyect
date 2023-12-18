@@ -5764,6 +5764,36 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1684530596}
+    - target: {fileID: 5471662456305110470, guid: 359d546eb2f92834aa334b0702682de4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471662456305110470, guid: 359d546eb2f92834aa334b0702682de4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471662456305110470, guid: 359d546eb2f92834aa334b0702682de4,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471662456305110470, guid: 359d546eb2f92834aa334b0702682de4,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471662456305110470, guid: 359d546eb2f92834aa334b0702682de4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 659.451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471662456305110470, guid: 359d546eb2f92834aa334b0702682de4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -118
+      objectReference: {fileID: 0}
     - target: {fileID: 7069734806810476594, guid: 359d546eb2f92834aa334b0702682de4,
         type: 3}
       propertyPath: m_LocalPosition.z

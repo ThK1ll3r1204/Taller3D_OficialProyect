@@ -118,8 +118,12 @@ public class PlayerMove : MonoBehaviour
             rb.useGravity = false;
             playerLifeScript.invulnerableState = true;
 
-            transform.position = Vector3.Lerp(startPosition, endPosition, (Time.time - startTime) / dashDuration);
-                        
+            //transform.position = Vector3.Lerp(startPosition, endPosition, (Time.time - startTime) / dashDuration);
+
+            rb.AddForce(dashDirection * dashDistance, ForceMode.Impulse);
+
+            yield return new WaitForSeconds(dashDuration);
+            rb.velocity = Vector3.zero;
             yield return null;
         }
         rb.useGravity = true;
@@ -129,7 +133,6 @@ public class PlayerMove : MonoBehaviour
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
-        rb.velocity = Vector3.zero;
     }
 
     void SlipperyFriction()

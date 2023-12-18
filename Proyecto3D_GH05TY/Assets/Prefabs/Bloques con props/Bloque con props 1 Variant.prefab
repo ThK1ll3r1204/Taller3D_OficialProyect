@@ -33,6 +33,12 @@ PrefabInstance:
       propertyPath: m_CookingOptions
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 7259246080643018498, guid: d56b5054815934f8ca542c89af8c2e91,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 032c5c2ce299a1b4ab6aa3b3a80949d0,
+        type: 2}
     - target: {fileID: 7885995875528288822, guid: d56b5054815934f8ca542c89af8c2e91,
         type: 3}
       propertyPath: m_Convex

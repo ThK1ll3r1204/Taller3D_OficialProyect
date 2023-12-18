@@ -24,12 +24,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57477743623275646}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0, z: 0.503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7940226165065604244}
+  m_Father: {fileID: 4274704457603496982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2122194390043876340
 GameObject:
@@ -213,11 +213,12 @@ Transform:
   m_GameObject: {fileID: 4056046931398486184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.549, y: 1.08, z: 0.7369919}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7940226165065604244}
+  - {fileID: 1366743264459405148}
   - {fileID: 355373850293319209}
   - {fileID: 2052437464436113127}
   - {fileID: 7515380131290543528}
@@ -280,7 +281,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4056046931398486184}
-  m_Material: {fileID: 13400000, guid: c1d00ae6fc825d440b1caebff288d8ca, type: 2}
+  m_Material: {fileID: 13400000, guid: 032c5c2ce299a1b4ab6aa3b3a80949d0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -312,8 +313,8 @@ MonoBehaviour:
   playerLifeScript: {fileID: 0}
   velocidad: 10
   terrain: 0
-  dashDistance: 10
-  dashDuration: 0.5
+  dashDistance: 5
+  dashDuration: 0
   dashCooldown: 2
   sonidoDash: {fileID: 0}
   isCollidingWithSlippery: 0
@@ -498,8 +499,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.328, z: 0.752}
   m_LocalScale: {x: 0.17101727, y: 0.14699219, z: 1.4573197}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1366743264459405148}
+  m_Children: []
   m_Father: {fileID: 4274704457603496982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &574814288096714265
