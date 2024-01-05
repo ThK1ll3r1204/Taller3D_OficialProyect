@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+    public ParticleSystem deathFeedback;
     public int maxLife;
     public int currentLife;
     [SerializeField] public bool invulnerableState;
@@ -23,6 +24,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (currentLife <= 0)
         {
+            deathFeedback.Play();
             scoreScript.SaveHighScore();
             SceneManager.LoadScene("MENUof");
             Destroy(gameObject);

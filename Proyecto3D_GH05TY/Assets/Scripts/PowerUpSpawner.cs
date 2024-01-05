@@ -20,6 +20,5 @@ public class PowerUpSpawner : Spawner
             GameObject randomPrefab = gameObjectsPrefabs[randomIndex];
             Instantiate(randomPrefab, transform.position, Quaternion.identity);
         }
-
     }
 }

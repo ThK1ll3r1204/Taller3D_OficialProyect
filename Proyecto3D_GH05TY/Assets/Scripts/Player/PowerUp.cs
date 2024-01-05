@@ -14,6 +14,7 @@ public enum PowerUpsList
 
 public class PowerUp : MonoBehaviour
 {
+    [SerializeField] ParticleSystem healFeedback;
     PlayerShoot playerShootScript;
     PlayerLife playerLifeScript;
     MonoBehaviour dispersionPowerUpScript;
@@ -91,6 +92,7 @@ public class PowerUp : MonoBehaviour
                 if (playerLifeScript.currentLife < playerLifeScript.maxLife)
                 {
                     activePowerUp = PowerUpsList.Curar;
+                    healFeedback.Play();
                     Destroy(other.gameObject);
                 }
                 

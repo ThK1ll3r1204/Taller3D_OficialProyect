@@ -195,7 +195,6 @@ GameObject:
   - component: {fileID: 2079795706756702488}
   - component: {fileID: 5238476336656859440}
   - component: {fileID: 73462949039960543}
-  - component: {fileID: 4467406008432521499}
   - component: {fileID: 3030531752688322837}
   m_Layer: 6
   m_Name: Player
@@ -394,6 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30c5f5e80dbe44479c95be7a5d40347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healFeedback: {fileID: 5536633764220748915}
   activePowerUp: 5
   shieldPrefab: {fileID: 7202060700357391938, guid: e744ce033ab04214f950e826ebefdeb1,
     type: 3}
@@ -433,19 +433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFeedback: {fileID: 1645334635064531154}
---- !u!114 &4467406008432521499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056046931398486184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f495085db7144d4f8e14541988dce8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healFeedback: {fileID: 5536633764220748915}
 --- !u!65 &3030531752688322837
 BoxCollider:
   m_ObjectHideFlags: 0

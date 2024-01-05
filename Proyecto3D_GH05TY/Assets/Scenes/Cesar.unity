@@ -755,6 +755,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2250941149625012613, guid: cb43abece9d06054aaf4e03b6124dd02,
+        type: 3}
+      propertyPath: deathFeedback
+      value: 
+      objectReference: {fileID: 1536422942}
     - target: {fileID: 4056046931398486184, guid: cb43abece9d06054aaf4e03b6124dd02,
         type: 3}
       propertyPath: m_Name
@@ -1003,6 +1008,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1536422942 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1645334635064531154, guid: cb43abece9d06054aaf4e03b6124dd02,
+    type: 3}
+  m_PrefabInstance: {fileID: 971281211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1582439422 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7190618528265771676, guid: dd08e7019a34913489579098256fb7dd,

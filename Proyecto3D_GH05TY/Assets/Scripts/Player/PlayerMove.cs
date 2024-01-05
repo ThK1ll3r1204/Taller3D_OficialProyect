@@ -42,7 +42,7 @@ public class PlayerMove : MonoBehaviour
             Movement();
             PlayerCanRotate();
 
-            if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
+            if (canDash && Input.GetKeyDown(KeyCode.Space))
             {
                 StartCoroutine(PerformDash(lastMoveDirection));
             }
